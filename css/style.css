@@ -188,58 +188,58 @@ list-style-type:none;
 display:inline-block;
 margin-right:25px;
 }
-.about ul li a.fb{
+.about ul li a.wechat{
 background: url(../images/icons.png) no-repeat 0px 0px;
 width:72px;
 height:72px;
 display:block;
 }
-.about ul li a.twit{
+.about ul li a.qq{
 background: url(../images/icons.png) no-repeat -99px 0px;
 width:72px;
 height:72px;
 display:block;
 }
-.about ul li a.twit:hover{
+.about ul li a.qq:hover{
 background: url(../images/icons.png) no-repeat -99px -71px;
 }
-.about ul li a.in{
+.about ul li a.weibo{
 background: url(../images/icons.png) no-repeat -199px 0px;
 width:72px;
 height:72px;
 display:block;
 }
-.about ul li a.in:hover{
+.about ul li a.weibo:hover{
 background: url(../images/icons.png) no-repeat -199px -71px;
 }
-.about ul li a.drib{
+.about ul li a.facebook{
 background: url(../images/icons.png) no-repeat -299px 0px;
 width:72px;
 height:72px;
 display:block;
 }
-.about ul li a.drib:hover{
+.about ul li a.facebook:hover{
 background: url(../images/icons.png) no-repeat -299px -71px;
 }
-.about ul li a.goog{
+.about ul li a.github{
 background: url(../images/icons.png) no-repeat -399px 0px;
 width:72px;
 height:72px;
 display:block;
 }
-.about ul li a.goog:hover{
+.about ul li a.github:hover{
 background: url(../images/icons.png) no-repeat -399px -71px;
 }
-.about ul li a.pin{
+.about ul li a.email{
 background: url(../images/icons.png) no-repeat -499px 0px;
 width:72px;
 height:72px;
 display:block;
 }
-.about ul li a.pin:hover{
+.about ul li a.email:hover{
 background: url(../images/icons.png) no-repeat -499px -71px;
 }
-.about ul li a.fb:hover{
+.about ul li a.wechat:hover{
 background: url(../images/icons.png) no-repeat 0px -71px;
 }
 /*--//about--*/
@@ -345,7 +345,7 @@ font-weight:300;
 }
 .edu-border{
 border:1px solid #e2e2e2;
-margin-top:50px;
+margin-top:10px;
 border-radius: 6px;
 border-bottom: 2px solid #c3c3c3;
 }
@@ -501,7 +501,7 @@ background: url(../images/port-back.jpg) no-repeat 0px 0px;
   letter-spacing: 18px;
 }
 .gallery-grid {
-  padding: 0;
+  padding-right: 10px;
 }
 .gallery1 {
 position:relative;
@@ -2931,72 +2931,72 @@ border:none;
 	.about ul li {
 	  margin-right: 6px;
 	}
-	.about ul li a.drib {
+	.about ul li a.facebook {
 	  background: url(../images/icons.png) no-repeat -207px 1px;
 	  width: 50px;
 	  height: 50px;
 	  display: block;
 	  background-size: 839% !important;
 	}
-	.about ul li a.drib:hover {
+	.about ul li a.facebook:hover {
 	  background: url(../images/icons.png) no-repeat -207px -49px;
 		  background-size: 839% !important;
 	  }
-	.about ul li a.fb {
+	.about ul li a.wechat {
 	  background: url(../images/icons.png) no-repeat -0px 0px;
 	  width: 50px;
 	  height: 50px;
 	  display: block;
 	  background-size: 839% !important;
 	}
-	.about ul li a.fb:hover {
+	.about ul li a.wechat:hover {
 	  background: url(../images/icons.png) no-repeat -0px -49px;
 		  background-size: 839% !important;
 	  }
-	.about ul li a.pin {
+	.about ul li a.email {
 	  background: url(../images/icons.png) no-repeat -346px 0px;
 	  width: 50px;
 	  height: 50px;
 	  display: block;
 	  background-size: 839% !important;
 	}
-	.about ul li a.pin:hover {
+	.about ul li a.email:hover {
 	  background: url(../images/icons.png) no-repeat -346px -49px;
 		  background-size: 839% !important;
 	  }
-	.about ul li a.twit {
+	.about ul li a.qq {
 	  background: url(../images/icons.png) no-repeat -69px 1px;
 	  width: 50px;
 	  height: 50px;
 	  display: block;
 	  background-size: 839% !important;
 	}
-	.about ul li a.goog {
+	.about ul li a.github {
 	  background: url(../images/icons.png) no-repeat -278px 0px;
 	  width: 50px;
 	  height: 50px;
 	  display: block;
 	  background-size: 839% !important;
 	}
-	.about ul li a.goog:hover {
+	.about ul li a.github:hover {
 	  background: url(../images/icons.png) no-repeat -278px -49px;
 		  background-size: 839% !important;
 	  }
-	.about ul li a.in {
+	.about ul li a.weibo {
 	  background: url(../images/icons.png) no-repeat -139px 1px;
 	  width: 50px;
 	  height: 50px;
 	  display: block;
 	  background-size: 839% !important;
 	}
-	.about ul li a.in:hover{
+	.about ul li a.weibo:hover{
 	  background: url(../images/icons.png) no-repeat -139px -49px;
 		  background-size: 839% !important;
 	  }
 	.banner-right h1 {
 	  margin: 8px 0 15px 0;
 	}
-	.about ul li a.twit:hover {
+	.about ul li a.qq:hover {
 	  background: url(../images/icons.png) no-repeat -69px -49px;
 		background-size: 839% !important;
 	  }
@@ -3435,64 +3435,64 @@ a.callbacks_nav.callbacks1_nav.prev {
 .col-md-7.contact-right {
   margin-top: 30px;
 }
-.about ul li a.drib {
+.about ul li a.facebook {
 	  background: url(../images/icons.png) no-repeat -137px 1px;
 	  width: 33px;
 	  height: 33px;
 	  display: block;
 	  background-size: 839% !important;
 	}
-.about ul li a.drib:hover {
+.about ul li a.facebook:hover {
 	  background: url(../images/icons.png) no-repeat -137px -33px;
 	  }
-	.about ul li a.fb {
+	.about ul li a.wechat {
 	  background: url(../images/icons.png) no-repeat -0px 1px;
 	  width: 33px;
 	  height: 33px;
 	  display: block;
 	  background-size: 839% !important;
 	}
-	.about ul li a.fb:hover {
+	.about ul li a.wechat:hover {
 	  background: url(../images/icons.png) no-repeat -0px -33px;
 }	  
-	.about ul li a.pin {
+	.about ul li a.email {
 	  background: url(../images/icons.png) no-repeat -229px 0px;
 	  width: 33px;
 	  height: 33px;
 	  display: block;
 	  background-size: 839% !important;
 	}
-	.about ul li a.pin:hover {
+	.about ul li a.email:hover {
 	  background: url(../images/icons.png) no-repeat -229px -33px;
 	  }
-	.about ul li a.twit {
+	.about ul li a.qq {
 	  background: url(../images/icons.png) no-repeat -46px 1px;
 	  width: 33px;
 	  height: 33px;
 	  display: block;
 	  background-size: 839% !important;
 	}
-	.about ul li a.twit:hover {
+	.about ul li a.qq:hover {
 	  background: url(../images/icons.png) no-repeat -46px -32px;
 	  }
-	.about ul li a.goog {
+	.about ul li a.github {
 	  background: url(../images/icons.png) no-repeat -183px 0px;
 	  width: 33px;
 	  height: 33px;
 	  display: block;
 	  background-size: 839% !important;
 	}
-	.about ul li a.goog:hover {
+	.about ul li a.github:hover {
 	  background: url(../images/icons.png) no-repeat -183px -33px;
 }	  
-	.about ul li a.in {
+	.about ul li a.weibo {
 	  background: url(../images/icons.png) no-repeat -92px 1px;
 	  width: 33px;
 	  height: 33px;
 	  display: block;
 	  background-size: 839% !important;
 	}
-	.about ul li a.in:hover {
+	.about ul li a.weibo:hover {
 	  background: url(../images/icons.png) no-repeat -92px -33px;
 	  }
 }

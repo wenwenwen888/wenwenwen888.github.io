@@ -1,7 +1,7 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
-	<title>Home</title>
+	<title>欢迎来到Won的主页</title>
 	<!--fonts-->
 		<link href='http://fonts.useso.com/css?family=Raleway:400,100,200,300,500,600,700,800,900' rel='stylesheet' type='text/css'>
 		<link href='http://fonts.useso.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic' rel='stylesheet' type='text/css'>
@@ -30,6 +30,10 @@
 			});
 		</script>
 	<!-- start-smooth-scrolling -->
+	<!-- wechat -->
+	<link rel="stylesheet" href="css/main.css" />
+	<script type="text/javascript" src="js/jquery-1.8.2.min.js"></script>
+	<!-- wechat -->
 </head>
 <body>
 <!-- banner -->
@@ -40,6 +44,31 @@
 			<!--top-nav---->
 			<div class="logo">
 				<a href="index.html"><img src="images/logo.png" alt=""/></a>
+			</div>
+			<div class="top-nav">
+				<div class="nav-icon">
+					    <a href="#" class="right_bt" id="activator"><span> </span> </a>
+				</div>
+				<div class="box" id="box">
+					<div class="box_content">        					                         
+						<div class="box_content_center">
+							<div class="form_content">
+								<div class="menu_box_list">
+									<ul>
+										<li><a class="scroll" href="#home"><span>主页</span></a></li>
+										<li><a class="scroll" href="#about"><span>关于</span></a></li>
+										<li><a class="scroll" href="#services"><span>工具</span></a></li>
+										<li><a class="scroll" href="#portfolio"><span>作品</span></a></li>
+										<li><a class="scroll" href="#prize"><span>奖项</span></a></li>
+										<li><a class="scroll" href="#contact"><span>联系我</span></a></li>
+										<div class="clearfix"> </div>
+									</ul>
+								</div>
+								<a class="boxclose" id="boxclose"> <span> </span></a>
+							</div>                                  
+						</div> 	
+					</div> 
+				</div>       	  
 			</div>
 			<!---start-click-drop-down-menu----->
 			        <!----start-dropdown--->
@@ -72,13 +101,467 @@
 				<img src="images/1.png" alt=""/>
 			</div>
 			<div class="banner-right">
-				<h1>Hi 我是温温温888</h1>
+				<h1>Hi,我是温俊南</h1>
 				<div class="border"></div>
 				<h2>Android</h2>
+				<a href="http://shcm09.baidupcs.com/file/af1198f85a41bb8a10306b7f35820250?bkt=p3-1400af1198f85a41bb8a10306b7f3582025006e1b683000000021546&fid=2719602625-250528-524922930349569&time=1470303656&sign=FDTAXGERLBH-DCb740ccc5511e5e8fedcff06b081203-EMQt9p%2Bi1x5q2nblka%2BUNG5eubQ%3D&to=sh09vb&fm=Yan,B,M,mn&sta_dx=0&sta_cs=0&sta_ft=doc&sta_ct=0&fm2=Yangquan,B,M,mn&newver=1&newfm=1&secfm=1&flow_ver=3&pkey=1400af1198f85a41bb8a10306b7f3582025006e1b683000000021546&sl=76480590&expires=8h&rt=sh&r=973656289&mlogid=5026737370804707556&vuk=2719602625&vbdid=1920144657&fin=%E6%B8%A9%E4%BF%8A%E5%8D%97%20%E5%AE%89%E5%8D%93%E5%BC%80%E5%8F%91%E5%B7%A5%E7%A8%8B%E5%B8%88.doc&fn=%E6%B8%A9%E4%BF%8A%E5%8D%97%20%E5%AE%89%E5%8D%93%E5%BC%80%E5%8F%91%E5%B7%A5%E7%A8%8B%E5%B8%88.doc&slt=pm&uta=0&rtype=1&iv=0&isw=0&dp-logid=5026737370804707556&dp-callid=0.1.1" target="_blank">下载我的简历</a>
 			</div>
 			<div class="clearfix"></div>
 		</div>
 	</div>
 </div>
+<!--/header-banner-->
+<!--about-->
+<div class="about text-center" id="about">
+	<div class="container">
+		<h3>关于我</h3>
+		<div class="strip text-center"><img src="images/about.png" alt=" "/></div>
+		<p>对未知的事物会充满好奇心,因此有强大的求知心催促我不断的学习新的知识。涉及新的技术会尤其感兴趣,接受能力强,因此接收能力快。
+		容易适应新的环境,性格乐观热情,融洽活泼,洋溢着一股青春的气息。为人潇洒,但不风流。处事理智,信奉逻辑道理,凡事认真对待,责任心强,不会草草了事。
+		喜欢深入地去了解一部电影,一部动漫,一首音乐。关注时事,关注科技,关注一切古灵精怪。最后,我爱我的家人,我爱我的朋友。</p>
+		<ul>
+			<li><a class="wechat" id="wechat" href="javascript:window.scrollTo( 0, 0 );"></a></li>
+			<li><a class="qq" id="qq" href="javascript:window.scrollTo( 0, 0 );"></a></li>
+			<li><a class="weibo" href="http://weibo.com/u/1934084233" target="_blank"></a></li>
+			<li><a class="facebook" href="https://www.facebook.com/profile.php?id=100006004158771" target="_blank"></a></li>
+			<li><a class="github" href="https://github.com/wenwenwen888" target="_blank"></a></li>
+			<li><a class="email" id="email"></a></li>
+		</ul>
+		<!-- wechat 弹出框 -->
+		<div id="goodcover"></div>
+			
+		<div id="code">
+		  <div class="close1"><a href="javascript:void(0)" id="closebt"><img src="images/close.gif"></a></div>
+		  <div class="goodtxt">
+			<p>打开微信扫一扫</p>
+			<p>添加我为好友</p>
+		  </div>
+		  <div class="code-img"> <img id="ewmsrc"  src="images/code.png"></div>
+		</div>
+		<div id="code1">
+		  <div class="close1"><a href="javascript:void(0)" id="closebt1"><img src="images/close.gif"></a></div>
+		  <div class="goodtxt">
+			<p>打开QQ扫一扫</p>
+			<p>添加我为好友</p>
+		  </div>
+		  <div class="code-img"> <img id="ewmsrc"  src="images/code1.png"></div>
+		</div>
+		<!-- wechat 弹出框-->
+		<script>
+$(function() {
+    //alert($(window).height());
+    $('#wechat').click(function() {
+        $('#code').center();
+        $('#goodcover').show();
+		$('#code').show();
+        $('#code').fadeIn();
+    });
+	$('#qq').click(function() {
+        $('#code1').center();
+        $('#goodcover').show();
+		$('#code1').show();
+        $('#code1').fadeIn();
+    });
+	$('#email').click(function() {
+       alert("Hotmail邮箱:wenwenwen888@live.com\nQQ邮箱:825570853@qq.com");
+    });
+    $('#closebt').click(function() {
+        $('#code').hide();
+        $('#goodcover').hide();
+    });
+	$('#closebt1').click(function() {
+		$('#code1').hide();
+        $('#goodcover').hide();
+    });
+	$('#goodcover').click(function() {
+        $('#code').hide();
+		$('#code1').hide();
+        $('#goodcover').hide();
+    });
+    /*var val=$(window).height();
+	var codeheight=$("#code").height();
+    var topheight=(val-codeheight)/2;
+	$('#code').css('top',topheight);*/
+    jQuery.fn.center = function(loaded) {
+        var obj = this;
+        body_width = parseInt($(window).width());
+        body_height = parseInt($(window).height());
+        block_width = parseInt(obj.width());
+        block_height = parseInt(obj.height());
+
+        left_position = parseInt((body_width / 2) - (block_width / 2) + $(window).scrollLeft());
+        if (body_width < block_width) {
+            left_position = 0 + $(window).scrollLeft();
+        };
+
+        top_position = parseInt((body_height / 2) - (block_height / 2) + $(window).scrollTop());
+        if (body_height < block_height) {
+            top_position = 0 + $(window).scrollTop();
+        };
+
+        if (!loaded) {
+
+            obj.css({
+                'position': 'absolute'
+            });
+            obj.css({
+                'top': ($(window).height() - $('#code').height()) * 0.5,
+                'left': left_position
+            });
+            $(window).bind('resize', function() {
+                obj.center(!loaded);
+            });
+            $(window).bind('scroll', function() {
+                obj.center(!loaded);
+            });
+
+        } else {
+            obj.stop();
+            obj.css({
+                'position': 'absolute'
+            });
+            obj.animate({
+                'top': top_position
+            }, 200, 'linear');
+        }
+    }
+
+})
+</script>
+	</div>
+</div>
+<!--//about-->
+<div class="about-back"></div>
+<!--my skill-->
+<div class="my-skills text-center">
+	<div class="container">
+		<h3>我的技能</h3>
+		<div class="strip text-center"><img src="images/skill.png" alt=" "/></div>
+		<div class="skill-grids">
+					<div class="col-md-2 skills-grid text-center">
+						<div class="circle" id="circles-1"></div>
+						<p>Android</p>
+					</div>
+					<div class="col-md-2 skills-grid text-center">
+						<div class="circle" id="circles-2"></div>
+						<p>Java</p>
+					</div>
+					<div class="col-md-2 skills-grid text-center">
+						<div class="circle" id="circles-3"></div>
+						<p>Html 5 / CSS 3</p>
+					</div>
+					<div class="col-md-2 skills-grid text-center">
+						<div class="circle" id="circles-4"></div>
+						<p>ASP.NET</p>
+					</div>
+					<div class="col-md-2 skills-grid text-center">
+						<div class="circle" id="circles-5"></div>
+						<p>SQL</p>
+					</div>
+					<div class="col-md-2 skills-grid text-center">
+						<div class="circle" id="circles-6"></div>
+						<p>Photoshop</p>
+					</div>
+					<div class="clearfix"> </div>
+				 <script type="text/javascript" src="js/circles.js"></script>
+					         <script>
+								var colors = [
+										['#6ed4c0', '#ffffff'], ['#6ed4c0', '#ffffff'], ['#6ed4c0', '#ffffff'], ['#6ed4c0', '#ffffff'], ['#6ed4c0', '#ffffff'], ['#6ed4c0', '#ffffff']
+									];
+								for (var i = 1; i <= 7; i++) {
+									var child = document.getElementById('circles-' + i),
+									percentage = 100 - (i * 10);						
+									if(i==3){
+									percentage = 60;
+									}
+									Circles.create({
+										id:         child.id,
+										percentage: percentage,
+										radius:     80,
+										width:      10,
+										number:   	percentage / 1,
+										text:       '%',
+										colors:     colors[i - 1]
+									});
+								}
+						
+				</script>
+		</div>
+	</div>	
+</div>
+<!--//my skill-->
+<div class="my-skill-back"></div>
+<!--education-->
+<div class="education text-center">
+	<div class="container">
+		<div class="edu-info">
+			<h3>学历</h3>
+		</div>
+		<div class="strip text-center"><img src="images/edu.png" alt=" "/></div>
+		<div class="edu-grids">
+			<div class="col-md-44 edu-grid">
+				<p>2013 - 2016</p><span>毕业</span>
+				<div class="edu-border">
+					<div class="edu-grid-master">
+						<h3>移动应用开发</h3>
+						<h4>中山职业技术学院</h4>
+					</div>
+					<div class="edu-grid-info">
+						<h5>各科专业成绩多数为优,个别良好,无挂科记录.多次参加学院的各种技能比赛和代表学院参加省级比赛.</h5>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+</div>
+<!--//education-->
+<div class="strip-border"><p></p></div>
+<!--work-->
+<div class="work-experience text-center">
+	
+	<div class="container">
+		<div class="work-info">
+			<h3>工作经验</h3>
+		</div>
+		<div class="strip text-center"><img src="images/work.png" alt=" "/></div>
+		<div class="work-grids">
+			<div class="col-md-44 w-grid">
+				<div class="work-grid">
+					<h3>2015 - 2016</h3>
+					<div class="work-grid-info">
+						<h4>中山哎舍网络科技有限公司</h4>
+						<h5>Android软件工程师</h5>
+						<p>主要负责业务Android端的开发，开发的主要内容与地图有关，
+						国内外几乎所有的地图接口都用过(包括室内地图都接过)，负责app的部分ui，
+						数据的上传与解析加载，搭载整体的app框架。公司实行敏捷开发模式，
+						有时也会负责做简单的H5页面，因此会用ASP.NET,IIS写基础的后台与API接口</p>
+					</div>
+				</div>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+	</div>
+</div>
+<!--//work-->
+<div class="services-back"></div>
+
+<!--services-->
+<div class="services text-center" id="services">
+	<div class="container">
+		<div class="ser-info">
+			<h3>使用的工具</h3>
+		</div>
+		<div class="strip text-center"><img src="images/ser.png" alt=" "/></div>
+		<div class="ser-grids">
+			<div class="col-md-3 ser-grid">
+				<div class="ser-imagea"></div>
+				<h3>Android Studio</h3>
+				<p>主要开发工具,用于开发Android应用</p>
+			</div>
+			<div class="col-md-3 ser-grid">
+				<div class="ser-imageb"></div>
+				<h3>Eclipse</h3>
+				<p>主要使用工具,用于开发Android应用与Java类测试</p>
+			</div>
+			<div class="col-md-3 ser-grid">
+				<div class="ser-imagec"></div>
+				<h3>Visual Studio</h3>
+				<p>次要实用工具,用于开发网页应用与后台开发</p>
+			</div>
+			<div class="col-md-3 ser-grid">
+				<div class="ser-imaged"></div>
+				<h3>PhotoShop</h3>
+				<p>次要使用工具,主要用来修饰图片用于满足日常需求</p>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+	</div>
+</div>
+<!--//services-->
+<!--portfolio-->
+<div class="gallery-section text-center" id="portfolio">
+	<div class="container">
+		<h3>参与产品</h3>
+		<div class="strip text-center"><img src="images/port.png" alt=" "/></div>
+		<p>初出茅庐,虽然接触的项目并不多,但是从项目当中学到了非常多的知识</p>
+		<div class="gallery-grids">
+			<div class="top-gallery">
+				<div class="col-md-4 gallery-grid gallery1">
+					<img src="images/p1.png" class="img-responsive" alt="/">
+				</div>
+				<div class="col-md-4 gallery-grid gallery1">
+					<img src="images/p2.png" class="img-responsive" alt="/">
+				</div>
+				<div class="col-md-4 gallery-grid gallery1">
+					<img src="images/p3.png" class="img-responsive" alt="/">
+				</div>
+				<div class="clearfix"> </div>
+			</div>
+				<link rel="stylesheet" href="css/swipebox.css">
+				<script src="js/jquery.swipebox.min.js"></script> 
+					<script type="text/javascript">
+						jQuery(function($) {
+							$(".swipebox").swipebox();
+						});
+					</script>
+		</div>
+	</div>
+</div>
+<!--//portfolio-->
+<!--process-->
+<div class="process text-center">
+	<div class="container">
+		<h3>产品过程</h3>
+		<div class="strip text-center"><img src="images/pro.png" alt=" "/></div>
+		<div class="process-girds">
+			<div class="col-md-2 process-pad">
+				<div class="process-gird">
+					<div class="process-imagea"></div>
+					<p>需求</p>
+					<img src="images/6.png" alt=""/>
+				</div>
+			</div>
+			<div class="col-md-2 process-pad">
+				<div class="process-gird">
+					<div class="process-imageb"></div>
+					<p>概念</p>
+					<img class="pro-imga" src="images/6.png" alt=""/>
+				</div>
+			</div>
+			<div class="col-md-2 process-pad">
+				<div class="process-gird">
+					<div class="process-imagec"></div>
+					<p>设计</p>
+					<img class="pro-img" src="images/6.png" alt=""/>
+				</div>
+			</div>
+			<div class="col-md-2 process-pad">
+				<div class="process-gird">
+					<div class="process-imaged"></div>
+					<p>开发</p>
+					<img class="pro-imgb" src="images/6.png" alt=""/>
+				</div>
+			</div>
+			<div class="col-md-2 process-pad">
+				<div class="process-gird">
+					<div class="process-imagee"></div>
+					<p>测试</p>
+					<img src="images/6.png" alt=""/>
+				</div>
+			</div>
+			<div class="col-md-2 process-pad">
+				<div class="process-gird">
+					<div class="process-imagef"></div>
+					<p>上架</p>
+					
+				</div>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+	</div>
+</div>
+<!--//process-->
+<div class="process-back"></div>
+<!--clients-->
+<div class="clients text-center" id="prize">
+	<div class="container">
+		<h4>所获奖项</h4>
+		<div class="strip-line"></div>
+		<div class="client-grids">
+			<div class="col-md-4 cl-grid">
+				<div class="client-grid">
+					<h4>软件开发竞赛二等奖【学院】</h4>
+				</div>
+			</div>
+			<div class="col-md-4 cl-grid">
+				<div class="client-grid">
+					<h4>移动应用开发二等奖【省级】</h4>
+				</div>
+			</div>
+			<div class="col-md-4 cl-grid">
+				<div class="client-grid">
+					<h4>蓝桥杯java组二等奖【省级】</h4>
+				</div>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+	</div>
+</div>
+<!--clients-->
+<div class="client-back"></div>
+
+<div class="contact-back"></div>
+<!--contact-->
+<div class="contact" id="contact">
+	<div class="container">
+		<div class="contact-info text-center">
+			<h3>联系我</h3>
+			<div class="strip text-center"><img src="images/con1.png" alt=" "/></div>
+		</div>
+		<div class="contact-grids">
+			<div class="col-md-4 contact-left">
+				<h3>讨论交流</h3>
+				<div class="stripb"></div>
+				<ul>
+					<li>广东省</li>
+					<li>广州市天河区</li>
+					<li>程界西村三多南大街</li>
+					<li>QQ:825570853</li>
+					<li><a href="mailto:wenwenwen888@live.com">wenwenwen888@live.com</a></li>
+				</ul>
+			</div>
+			<div class="col-md-4 contact-left">
+				<h3>交朋友</h3>
+				<div class="stripb"></div>
+				<ul>
+					<li><a href="http://weibo.com/u/1934084233" target="_blank">微博</a></li>
+					<li><a href="https://www.facebook.com/profile.php?id=100006004158771" target="_blank">Facebook</a></li>
+					<li></li>
+					<li>OverWatch:#5605</li>
+					<li>更多详细个人资料请下载我的简历</li>
+				</ul>
+			</div>
+			<div class="col-md-4 contact-left">
+				<h3>合作联系</h3>
+				<div class="stripb"></div>
+				<ul>
+					<li>手机号码:</li>
+					<li>13046333947</li>
+					<li></li>
+					<li>WeChat:825570853</li>
+				</ul>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+	</div>
+</div>
+<!--//contact-->
+<div class="footer-top"></div>
+<!--resume-->
+<div class="resume text-center">
+	<div class="container">
+		<div class="strip text-center"><a href="http://shcm09.baidupcs.com/file/af1198f85a41bb8a10306b7f35820250?bkt=p3-1400af1198f85a41bb8a10306b7f3582025006e1b683000000021546&fid=2719602625-250528-524922930349569&time=1470303656&sign=FDTAXGERLBH-DCb740ccc5511e5e8fedcff06b081203-EMQt9p%2Bi1x5q2nblka%2BUNG5eubQ%3D&to=sh09vb&fm=Yan,B,M,mn&sta_dx=0&sta_cs=0&sta_ft=doc&sta_ct=0&fm2=Yangquan,B,M,mn&newver=1&newfm=1&secfm=1&flow_ver=3&pkey=1400af1198f85a41bb8a10306b7f3582025006e1b683000000021546&sl=76480590&expires=8h&rt=sh&r=973656289&mlogid=5026737370804707556&vuk=2719602625&vbdid=1920144657&fin=%E6%B8%A9%E4%BF%8A%E5%8D%97%20%E5%AE%89%E5%8D%93%E5%BC%80%E5%8F%91%E5%B7%A5%E7%A8%8B%E5%B8%88.doc&fn=%E6%B8%A9%E4%BF%8A%E5%8D%97%20%E5%AE%89%E5%8D%93%E5%BC%80%E5%8F%91%E5%B7%A5%E7%A8%8B%E5%B8%88.doc&slt=pm&uta=0&rtype=1&iv=0&isw=0&dp-logid=5026737370804707556&dp-callid=0.1.1" target="_blank"><img src="images/down.png" alt=" "/></a></div>
+		<div class="down"><a href="http://shcm09.baidupcs.com/file/af1198f85a41bb8a10306b7f35820250?bkt=p3-1400af1198f85a41bb8a10306b7f3582025006e1b683000000021546&fid=2719602625-250528-524922930349569&time=1470303656&sign=FDTAXGERLBH-DCb740ccc5511e5e8fedcff06b081203-EMQt9p%2Bi1x5q2nblka%2BUNG5eubQ%3D&to=sh09vb&fm=Yan,B,M,mn&sta_dx=0&sta_cs=0&sta_ft=doc&sta_ct=0&fm2=Yangquan,B,M,mn&newver=1&newfm=1&secfm=1&flow_ver=3&pkey=1400af1198f85a41bb8a10306b7f3582025006e1b683000000021546&sl=76480590&expires=8h&rt=sh&r=973656289&mlogid=5026737370804707556&vuk=2719602625&vbdid=1920144657&fin=%E6%B8%A9%E4%BF%8A%E5%8D%97%20%E5%AE%89%E5%8D%93%E5%BC%80%E5%8F%91%E5%B7%A5%E7%A8%8B%E5%B8%88.doc&fn=%E6%B8%A9%E4%BF%8A%E5%8D%97%20%E5%AE%89%E5%8D%93%E5%BC%80%E5%8F%91%E5%B7%A5%E7%A8%8B%E5%B8%88.doc&slt=pm&uta=0&rtype=1&iv=0&isw=0&dp-logid=5026737370804707556&dp-callid=0.1.1" target="_blank">下载我的简历</a></div>
+	</div>
+</div>
+<!--//resume-->
+<!-- here stars scrolling icon -->
+	<script type="text/javascript">
+		$(document).ready(function() {
+			/*
+				var defaults = {
+				containerID: 'toTop', // fading element id
+				containerHoverID: 'toTopHover', // fading element hover id
+				scrollSpeed: 1200,
+				easingType: 'linear' 
+				};
+			*/
+								
+			$().UItoTop({ easingType: 'easeOutQuart' });
+								
+			});
+	</script>
+<!-- //here ends scrolling icon -->
 </body>
 </html>

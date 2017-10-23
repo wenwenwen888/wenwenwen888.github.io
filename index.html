@@ -1,133 +1,177 @@
-﻿<!DOCTYPE html>
-<html>
+<!DOCTYPE html>
+<!--[if lt IE 8 ]><html class="no-js ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="no-js ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 8)|!(IE)]><!--><html class="no-js" lang="en"> <!--<![endif]-->
 <head>
+
+   <!--- Basic Page Needs
+   ================================================== -->
+   <meta charset="utf-8">
 	<title>欢迎来到Won的主页</title>
-	<!--fonts-->
-		<link href='http://fonts.useso.com/css?family=Raleway:400,100,200,300,500,600,700,800,900' rel='stylesheet' type='text/css'>
-		<link href='http://fonts.useso.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic' rel='stylesheet' type='text/css'>
-	<!--//fonts-->
-		<link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
-		<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
-	<!-- for-mobile-apps -->
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-		<meta name="keywords" content="Kong Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template, 
-		Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
-		<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
-	<!-- //for-mobile-apps -->
-	<!-- js -->
-		<script type="text/javascript" src="js/jquery.min.js"></script>
-	<!-- js -->
-	<!-- start-smooth-scrolling -->
-		<script type="text/javascript" src="js/move-top.js"></script>
-		<script type="text/javascript" src="js/easing.js"></script>
-		<script type="text/javascript">
-			jQuery(document).ready(function($) {
-				$(".scroll").click(function(event){		
-					event.preventDefault();
-					$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
-				});
-			});
-		</script>
-	<!-- start-smooth-scrolling -->
-	<!-- wechat -->
+	<meta name="description" content="">
+	<meta name="author" content="">
+
+   <!-- Mobile Specific Metas
+   ================================================== -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<!-- CSS
+    ================================================== -->
+   <link rel="stylesheet" href="css/default.css">
+	<link rel="stylesheet" href="css/layout.css">
+   <link rel="stylesheet" href="css/media-queries.css">
+   <link rel="stylesheet" href="css/magnific-popup.css">
+
+   <!-- Script
+   ================================================== -->
+	<script src="js/modernizr.js"></script>
+
+   <!-- Favicons
+	================================================== -->
+	<link rel="shortcut icon" href="favicon.png" >
 	<link rel="stylesheet" href="css/main.css" />
-	<script type="text/javascript" src="js/jquery-1.8.2.min.js"></script>
-	<!-- wechat -->
+	
+	<!-- Java Script
+   ================================================== -->
+   <script src="js/jquery.min.js"></script>
+   <!-- <script type="text/javascript" src="js/jquery-3.0.0.min.js"></script> -->
+   <script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+   <script type="text/javascript" src="js/jquery-migrate-1.2.1.min.js"></script>
+
+   <script src="js/jquery.flexslider.js"></script>
+   <script src="js/waypoints.js"></script>
+   <script src="js/jquery.fittext.js"></script>
+   <script src="js/magnific-popup.js"></script>
+   <script src="js/init.js"></script>
+   
+   <!-- 弹框查看图片的JS文件引用 -->
+	<link rel="stylesheet" href="http://keleyi.com/keleyi/phtml/jqtexiao/3/css/keleyi.css">
+	<script type="text/javascript" src="http://keleyi.com/keleyi/pmedia/jquery/jquery-1.10.2.min.js"></script>
+	<script type="text/javascript" src="http://keleyi.com/keleyi/phtml/jqtexiao/3/js/keleyi.min.js"></script>
+	
+	<script type="text/javascript">
+		$(function() {
+			//alert($(window).height());
+			$('#wechat').click(function() {
+				$('#code').center();
+				$('#goodcover').show();
+				$('#code').show();
+				$('#code').fadeIn();
+			});
+			$('#qq').click(function() {
+				$('#code1').center();
+				$('#goodcover').show();
+				$('#code1').show();
+				$('#code1').fadeIn();
+			});
+			$('#email').click(function() {
+			   alert("gmail邮箱:wenjunnan1994@gmail.com");
+			});
+			$('#closebt').click(function() {
+				$('#code').hide();
+				$('#goodcover').hide();
+			});
+			$('#closebt1').click(function() {
+				$('#code1').hide();
+				$('#goodcover').hide();
+			});
+			$('#goodcover').click(function() {
+				$('#code').hide();
+				$('#code1').hide();
+				$('#goodcover').hide();
+			});
+			/*var val=$(window).height();
+			var codeheight=$("#code").height();
+			var topheight=(val-codeheight)/2;
+			$('#code').css('top',topheight);*/
+			jQuery.fn.center = function(loaded) {
+				var obj = this;
+				body_width = parseInt($(window).width());
+				body_height = parseInt($(window).height());
+				block_width = parseInt(obj.width());
+				block_height = parseInt(obj.height());
+
+				left_position = parseInt((body_width / 2) - (block_width / 2) + $(window).scrollLeft());
+				if (body_width < block_width) {
+					left_position = 0 + $(window).scrollLeft();
+				};
+
+				top_position = parseInt((body_height / 2) - (block_height / 2) + $(window).scrollTop());
+				if (body_height < block_height) {
+					top_position = 0 + $(window).scrollTop();
+				};
+
+				if (!loaded) {
+
+					obj.css({
+						'position': 'absolute'
+					});
+					obj.css({
+						'top': ($(window).height() - $('#code').height()) * 0.5,
+						'left': left_position
+					});
+					$(window).bind('resize', function() {
+						obj.center(!loaded);
+					});
+					$(window).bind('scroll', function() {
+						obj.center(!loaded);
+					});
+
+				} else {
+					obj.stop();
+					obj.css({
+						'position': 'absolute'
+					});
+					obj.animate({
+						'top': top_position
+					}, 200, 'linear');
+				}
+			}
+
+		})
+		</script>
+
 </head>
+
 <body>
-<!-- banner -->
-<div class="banner" id="home">
-	<div class="container"> 
-		<div class="top-header row">
-			<script src="js/classie.js"></script>
-			<!--top-nav---->
-			<div class="logo">
-				<a href="index.html"><img src="images/logo.png" alt=""/></a>
-			</div>
-			<div class="top-nav">
-				<div class="nav-icon">
-					    <a href="#" class="right_bt" id="activator"><span> </span> </a>
-				</div>
-				<div class="box" id="box">
-					<div class="box_content">        					                         
-						<div class="box_content_center">
-							<div class="form_content">
-								<div class="menu_box_list">
-									<ul>
-										<li><a class="scroll" href="#home"><span>主页</span></a></li>
-										<li><a class="scroll" href="#about"><span>关于</span></a></li>
-										<li><a class="scroll" href="#services"><span>工具</span></a></li>
-										<li><a class="scroll" href="#portfolio"><span>作品</span></a></li>
-										<li><a class="scroll" href="#prize"><span>奖项</span></a></li>
-										<li><a class="scroll" href="#contact"><span>联系我</span></a></li>
-										<div class="clearfix"> </div>
-									</ul>
-								</div>
-								<a class="boxclose" id="boxclose"> <span> </span></a>
-							</div>                                  
-						</div> 	
-					</div> 
-				</div>       	  
-			</div>
-			<!---start-click-drop-down-menu----->
-			        <!----start-dropdown--->
-			         <script type="text/javascript">
-						var $ = jQuery.noConflict();
-							$(function() {
-								$('#activator').click(function(){
-									$('#box').animate({'top':'0px'},900);
-								});
-								$('#boxclose').click(function(){
-								$('#box').animate({'top':'-1000px'},900);
-								});
-							});
-							$(document).ready(function(){
-							//Hide (Collapse) the toggle containers on load
-							$(".toggle_container").hide(); 
-							//Switch the "Open" and "Close" state per click then slide up/down (depending on open/close state)
-							$(".trigger").click(function(){
-								$(this).toggleClass("active").next().slideToggle("slow");
-									return false; //Prevent the browser jump to the link anchor
-							});
-												
-						});
-					</script>
-			<!---//End-click-drop-down-menu----->
-			<div class="clearfix"> </div>
-		</div>
-		<div class="banner-info">
-			<div class="banner-left">
-				<img src="images/1.png" alt=""/>
-			</div>
-			<div class="banner-right">
-				<h1>Hi,我是温俊南</h1>
-				<div class="border"></div>
-				<h2>Android</h2>
-				<a href="温俊南(安卓开发工程师).doc" target="_blank">下载我的简历</a>
-			</div>
-			<div class="clearfix"></div>
-		</div>
-	</div>
-</div>
-<!--/header-banner-->
-<!--about-->
-<div class="about text-center" id="about">
-	<div class="container">
-		<h3>关于我</h3>
-		<div class="strip text-center"><img src="images/about.png" alt=" "/></div>
-		<p>对未知的事物会充满好奇心,因此有强大的求知心催促我不断的学习新的知识。涉及新的技术会尤其感兴趣,接受能力强,因此接收能力快。
-		容易适应新的环境,性格乐观热情,融洽活泼,洋溢着一股青春的气息。为人潇洒,但不风流。处事理智,信奉逻辑道理,凡事认真对待,责任心强,不会草草了事。
-		喜欢深入地去了解一部电影,一部动漫,一首音乐。关注时事,关注科技,关注一切古灵精怪。最后,我爱我的家人,我爱我的朋友。</p>
-		<ul>
-			<li><a class="wechat" id="wechat" href="javascript:window.scrollTo( 0, 0 );"></a></li>
-			<li><a class="qq" id="qq" href="javascript:window.scrollTo( 0, 0 );"></a></li>
-			<li><a class="weibo" href="http://weibo.com/u/1934084233" target="_blank"></a></li>
-			<li><a class="facebook" href="https://www.facebook.com/profile.php?id=100006004158771" target="_blank"></a></li>
-			<li><a class="github" href="https://github.com/wenwenwen888" target="_blank"></a></li>
-			<li><a class="email" id="email"></a></li>
-		</ul>
-		<!-- wechat 弹出框 -->
+
+   <!-- Header
+   ================================================== -->
+   <header id="home">
+
+      <nav id="nav-wrap">
+
+         <a class="mobile-btn" href="#nav-wrap" title="Show navigation">Show navigation</a>
+	      <a class="mobile-btn" href="#" title="Hide navigation">Hide navigation</a>
+
+         <ul id="nav" class="nav">
+            <li class="current"><a class="smoothscroll" href="#home" style="font-size: 15px;">主页</a></li>
+            <li><a class="smoothscroll" href="#about" style="font-size: 15px;">关于我</a></li>
+	         <li><a class="smoothscroll" href="#resume" style="font-size: 15px;">简介</a></li>
+            <li><a class="smoothscroll" href="#portfolio" style="font-size: 15px;">项目作品</a></li>
+            <li><a class="smoothscroll" href="#testimonials" style="font-size: 15px;">经历感悟</a></li>
+            <li><a class="smoothscroll" href="#contact" style="font-size: 15px;">联系我</a></li>
+         </ul> <!-- end #nav -->
+
+      </nav> <!-- end #nav-wrap -->
+
+      <div class="row banner">
+         <div class="banner-text">
+            <h1 class="responsive-headline">Hi，我是温俊南</h1>
+            <h3>现就职于<a href="http://www.feibu.info/" target="_blank">广州飞步信息科技有限公司</a>
+            , 主要担任公司程序部<span>安卓工程师</span>和<span>产品经理</span> , 为公司产品出谋划策和创造更多方便于大众和客户使用的APP . 想要<a class="smoothscroll" href="#about">了解更多</a>就往下看吧 .
+			</h3>
+            <ul class="social">
+               <li><a href="https://github.com/wenwenwen888" target="_blank"><i class="fa fa-github"></i></a></li>
+               <li><a class="wechat" id="wechat" href="javascript:window.scrollTo( 0, 0 );"><i class="fa fa-wechat"></i></a></li>
+               <li><a class="qq" id="qq" href="javascript:window.scrollTo( 0, 0 );"><i class="fa fa-qq"></i></a></li>
+               <li><a href="http://weibo.com/u/1934084233" target="_blank"><i class="fa fa-weibo"></i></a></li>
+               <li><a href="https://www.facebook.com/profile.php?id=100006004158771" target="_blank"><i class="fa fa-facebook"></i></a></li>
+               <li><a href="https://www.instagram.com/wenwenwen_888/" target="_blank"><i class="fa fa-instagram"></i></a></li>
+               <li><a href="mailto:wenjunnan1994@gmail.com"><i class="fa fa-envelope-o"></i></a></li>
+            </ul>
+			
+			<!-- wechat 弹出框 -->
 		<div id="goodcover"></div>
 			
 		<div id="code">
@@ -147,421 +191,723 @@
 		  <div class="code-img"> <img id="ewmsrc"  src="images/code1.png"></div>
 		</div>
 		<!-- wechat 弹出框-->
-		<script>
-$(function() {
-    //alert($(window).height());
-    $('#wechat').click(function() {
-        $('#code').center();
-        $('#goodcover').show();
-		$('#code').show();
-        $('#code').fadeIn();
-    });
-	$('#qq').click(function() {
-        $('#code1').center();
-        $('#goodcover').show();
-		$('#code1').show();
-        $('#code1').fadeIn();
-    });
-	$('#email').click(function() {
-       alert("Hotmail邮箱:wenwenwen888@live.com\nQQ邮箱:825570853@qq.com");
-    });
-    $('#closebt').click(function() {
-        $('#code').hide();
-        $('#goodcover').hide();
-    });
-	$('#closebt1').click(function() {
-		$('#code1').hide();
-        $('#goodcover').hide();
-    });
-	$('#goodcover').click(function() {
-        $('#code').hide();
-		$('#code1').hide();
-        $('#goodcover').hide();
-    });
-    /*var val=$(window).height();
-	var codeheight=$("#code").height();
-    var topheight=(val-codeheight)/2;
-	$('#code').css('top',topheight);*/
-    jQuery.fn.center = function(loaded) {
-        var obj = this;
-        body_width = parseInt($(window).width());
-        body_height = parseInt($(window).height());
-        block_width = parseInt(obj.width());
-        block_height = parseInt(obj.height());
+		
+			
+         </div>
+      </div>
+	  
+      <p class="scrolldown">
+         <a class="smoothscroll" href="#about"><i class="icon-down-circle"></i></a>
+      </p>
 
-        left_position = parseInt((body_width / 2) - (block_width / 2) + $(window).scrollLeft());
-        if (body_width < block_width) {
-            left_position = 0 + $(window).scrollLeft();
-        };
+   </header> <!-- Header End -->
 
-        top_position = parseInt((body_height / 2) - (block_height / 2) + $(window).scrollTop());
-        if (body_height < block_height) {
-            top_position = 0 + $(window).scrollTop();
-        };
 
-        if (!loaded) {
+   <!-- About Section
+   ================================================== -->
+   <section id="about">
 
-            obj.css({
-                'position': 'absolute'
-            });
-            obj.css({
-                'top': ($(window).height() - $('#code').height()) * 0.5,
-                'left': left_position
-            });
-            $(window).bind('resize', function() {
-                obj.center(!loaded);
-            });
-            $(window).bind('scroll', function() {
-                obj.center(!loaded);
-            });
+      <div class="row">
 
-        } else {
-            obj.stop();
-            obj.css({
-                'position': 'absolute'
-            });
-            obj.animate({
-                'top': top_position
-            }, 200, 'linear');
-        }
-    }
+         <div class="three columns">
 
-})
-</script>
-	</div>
-</div>
-<!--//about-->
-<div class="about-back"></div>
-<!--my skill-->
-<div class="my-skills text-center">
-	<div class="container">
-		<h3>我的技能</h3>
-		<div class="strip text-center"><img src="images/skill.png" alt=" "/></div>
-		<div class="skill-grids">
-					<div class="col-md-2 skills-grid text-center">
-						<div class="circle" id="circles-1"></div>
-						<p>Android</p>
-					</div>
-					<div class="col-md-2 skills-grid text-center">
-						<div class="circle" id="circles-2"></div>
-						<p>Java</p>
-					</div>
-					<div class="col-md-2 skills-grid text-center">
-						<div class="circle" id="circles-3"></div>
-						<p>Html 5 / CSS 3</p>
-					</div>
-					<div class="col-md-2 skills-grid text-center">
-						<div class="circle" id="circles-4"></div>
-						<p>ASP.NET</p>
-					</div>
-					<div class="col-md-2 skills-grid text-center">
-						<div class="circle" id="circles-5"></div>
-						<p>SQL</p>
-					</div>
-					<div class="col-md-2 skills-grid text-center">
-						<div class="circle" id="circles-6"></div>
-						<p>Photoshop</p>
-					</div>
-					<div class="clearfix"> </div>
-				 <script type="text/javascript" src="js/circles.js"></script>
-					         <script>
-								var colors = [
-										['#6ed4c0', '#ffffff'], ['#6ed4c0', '#ffffff'], ['#6ed4c0', '#ffffff'], ['#6ed4c0', '#ffffff'], ['#6ed4c0', '#ffffff'], ['#6ed4c0', '#ffffff']
-									];
-								for (var i = 1; i <= 7; i++) {
-									var child = document.getElementById('circles-' + i),
-									percentage = 100 - (i * 10);						
-									if(i==3){
-									percentage = 60;
-									}
-									Circles.create({
-										id:         child.id,
-										percentage: percentage,
-										radius:     80,
-										width:      10,
-										number:   	percentage / 1,
-										text:       '%',
-										colors:     colors[i - 1]
-									});
-								}
-						
+            <img class="profile-pic"  src="images/profilepic.png" alt="" />
+
+         </div>
+
+         <div class="nine columns main-col">
+
+            <h2>关于我</h2>
+
+            <p>对未知的事物会充满好奇心 , 因此有强大的求知心催促我不断的学习新的知识。
+			涉及新的技术会尤其感兴趣 , 接受能力强 , 因此接收能力快。 容易适应新的环境 , 性格乐观热情 , 融洽活泼 , 洋溢着一股青春的气息。
+			为人潇洒 , 但不风流。处事理智 , 信奉逻辑道理 , 凡事认真对待 , 责任心强 , 不会草草了事。 
+			喜欢深入了解地去做一件事 , 即使一部电影 , 一部动漫 , 一首音乐。关注时事 , 关注科技 , 关注一切古灵精怪。
+			最后 , 我爱我的家人 , 我爱我的朋友。
+            </p>
+
+            <div class="row">
+
+               <div class="columns contact-details">
+
+                  <h2>联系详情</h2>
+                  <p class="address">
+					   <span>姓名 : 温俊南</span><br>
+					   <span>地址 : 广东省广州市增城区中新镇风光路五巷二横1号</span><br>
+					   <span>电话 : (+86)13046666947</span><br>
+					   <span>邮箱 : wenjunnan1994@gmail.com</span>
+				  </p>
+
+               </div>
+
+               <!-- <div class="columns download"> -->
+                  <!-- <p> -->
+                     <!-- <a href="温俊南(安卓开发工程师).doc" class="button"><i class="fa fa-download"></i>下载简历</a> -->
+                  <!-- </p> -->
+               <!-- </div> -->
+
+            </div> <!-- end row -->
+
+         </div> <!-- end .main-col -->
+
+      </div>
+
+   </section> <!-- About Section End-->
+
+
+   <!-- Resume Section
+   ================================================== -->
+   <section id="resume">
+
+      <!-- Education
+      ----------------------------------------------- -->
+      <!-- <div class="row education"> -->
+
+         <!-- <div class="three columns header-col"> -->
+            <!-- <h1><span>Education</span></h1> -->
+         <!-- </div> -->
+
+         <!-- <div class="nine columns main-col"> -->
+
+            <!-- <div class="row item"> -->
+
+               <!-- <div class="twelve columns"> -->
+
+                  <!-- <h3>University of Life</h3> -->
+                  <!-- <p class="info">Master in Graphic Design <span>&bull;</span> <em class="date">April 2007</em></p> -->
+
+                  <!-- <p> -->
+                  <!-- Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. -->
+                  <!-- Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, -->
+                  <!-- ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. -->
+                  <!-- Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. Nullam dictum felis eu pede mollis pretium. -->
+                  <!-- </p> -->
+
+               <!-- </div> -->
+
+            <!-- </div> --> 
+			<!-- item end --> 
+
+            <!-- <div class="row item"> -->
+
+               <!-- <div class="twelve columns"> -->
+
+                  <!-- <h3>School of Cool Designers</h3> -->
+                  <!-- <p class="info">B.A. Degree in Graphic Design <span>&bull;</span> <em class="date">March 2003</em></p> -->
+
+                  <!-- <p> -->
+                  <!-- This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. -->
+                  <!-- Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem -->
+                  <!-- nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan -->
+                  <!-- ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat -->
+                  <!-- </p> -->
+
+               <!-- </div> -->
+
+            <!-- </div> -->
+			 <!-- item end --> 
+
+         <!-- </div>  -->
+		 <!-- main-col end -->
+
+      <!-- </div> -->
+	  <!-- End Education --> 
+
+
+      <!-- Work
+      ----------------------------------------------- -->
+      <div class="row work">
+
+         <div class="three columns header-col">
+            <h1><span>工作经历</span></h1>
+         </div>
+
+         <div class="nine columns main-col">
+
+            <div class="row item">
+
+               <div class="twelve columns">
+
+                  <h3>中山哎舍网络科技有限公司(实习)</h3>
+                  <p class="info">Android软件工程师 <span>&bull;</span> <em class="date">(2015 - 2016)</em></p>
+
+                  <p>
+                  公司开发的主要内容与地图相关 , 接触过很多地图SDK , 国内外几乎所有的地图接口都用过(包括室内地图)，
+				  当时室外地图选择的是国外的Maxbox , 而室内地图用的是国内的蜂鸟地图 . 
+				  实习阶段 , 主要负责搭载整体的app框架 , 部分UI界面、数据的上传与解析加载。公司实行敏捷开发模式， 
+				  有时也会负责做Mobile端的H5页面，因此会用ASP.NET,IIS写基础的后台与API接口 . 
+                  </p>
+
+               </div>
+
+            </div> <!-- item end -->
+
+            <div class="row item">
+
+               <div class="twelve columns">
+
+                  <h3>广州外语通软件科技有限公司</h3>
+                  <p class="info">Android软件工程师 <span>&bull;</span> <em class="date">(2016 - 2017)</em></p>
+
+                  <p>
+                  公司开发的主要内容为学习软件与在线授课软件 , 主要负责过一个授课软件(PAD端)的学生端与其他学习做题软件
+				  (下面的项目作品有两个案例) , 在此阶段主要对一些开发框架的认识与使用比较深 . 是毕业之后个人学习能力进步很大的一年 . 
+                  </p>
+
+               </div>
+
+            </div> <!-- item end -->
+			
+			<div class="row item">
+
+               <div class="twelve columns">
+
+                  <h3>广州飞步信息科技有限公司</h3>
+                  <p class="info">Android软件工程师  &  项目经理 <span>&bull;</span> <em class="date">(2017 - 至今)</em></p>
+
+                  <p>
+                  公司主要开发内容为一个基于校园生活的O2O服务平台 , 所含内容比较广泛(项目作品一) , 是一个综合性APP . 担任项目经理 , 
+				  负责研讨平台的新功能与易用性 . 作为开发者 , 也负责Android端的开发 . 公司副业为对不同客户进行定制型的软件开发 . 
+				  因此也负责与客户对接 , 需求文档的编写 . 也是Android端的主要开发者 . 
+                  </p>
+
+               </div>
+
+            </div> <!-- item end -->
+
+         </div> <!-- main-col end -->
+
+      </div> <!-- End Work -->
+
+
+      <!-- Skills
+      ----------------------------------------------- -->
+      <div class="row skill">
+
+         <div class="three columns header-col">
+            <h1><span>技能</span></h1>
+         </div>
+
+         <div class="nine columns main-col">
+
+            <p>
+			技能点都是假的 , 只要肯多学多看多做 . 所有问题都能迎面而破 . </br>
+			只有自己想不到的 , 没有自己做不到的 . </br>
+			因为我有全球最大的同性交友平台<a href="https://github.com/" target="_blank">&nbsp;&nbsp;github.com</a></br>
+			(。・∀・)ノ
+            </p>
+
+				<div class="bars">
+
+				   <ul class="skills">
+					   <li><span class="bar-expand android"></span><em>Android</em></li>
+						<li><span class="bar-expand java"></span><em>Java</em></li>
+						<!-- <li><span class="bar-expand kotlin"></span><em>Kotlin</em></li> -->
+						<li><span class="bar-expand css"></span><em>HTML5/CSS</em></li>
+						<li><span class="bar-expand sql"></span><em>SQL</em></li>
+						<li><span class="bar-expand asp"></span><em>ASP.NET</em></li>
+					</ul>
+
+				</div><!-- end skill-bars -->
+
+			</div> <!-- main-col end -->
+
+      </div> <!-- End skills -->
+
+   </section> <!-- Resume Section End-->
+
+
+   <!-- Portfolio Section
+   ================================================== -->
+   <section id="portfolio">
+
+      <div class="row">
+
+         <div class="twelve columns collapsed">
+
+            <h1>项目作品(部分)</h1>
+
+            <!-- portfolio-wrapper -->
+            <div id="portfolio-wrapper" class="bgrid-quarters s-bgrid-thirds cf"> 
+			
+			<div class="columns portfolio-item">
+                  <div class="xh"> 
+
+					<a title="校汇" href="images/xh/1.png">
+					<img id="xh" class="scale-with-grid" src="images/xh/1.png" alt="" width="200" height="300"/>
+					</a>
+					<a title="校汇" href="images/xh/2.png"></a>
+					<a title="校汇" href="images/xh/3.png"></a>
+					<a title="校汇" href="images/xh/4.png"></a>
+					<a title="校汇" href="images/xh/5.png"></a>
+					<a title="校汇" href="images/xh/6.png"></a>
+					<a title="校汇" href="images/xh/7.png"></a>
+					<a title="校汇" href="images/xh/8.png"></a>
+					<a title="校汇" href="images/xh/9.png"></a>
+					<a title="校汇" href="images/xh/10.png"></a>
+
+				</div>
+				<script type="text/jscript">
+					$('#xh').click(function() {
+						$('.xh').magnificPopup({
+						delegate: 'a',
+						type: 'image',
+						tLoading: 'Loading image #%curr%...',
+						mainClass: 'mfp-img-mobile',
+						gallery: {
+							enabled: true,
+							navigateByImgClick: true,
+							preload: [0,1] // Will preload 0 - before current, and 1 after the current image
+						},
+						image: {
+							tError: '<a href="%url%">The image #%curr%</a> could not be loaded.',
+							titleSrc: function(item) {
+								return item.el.attr('title') + '<small>By Won</small>';
+							}
+						}
+					});
+					});
 				</script>
-		</div>
-	</div>	
-</div>
-<!--//my skill-->
-<div class="my-skill-back"></div>
-<!--education-->
-<div class="education text-center">
-	<div class="container">
-		<div class="edu-info">
-			<h3>学历</h3>
-		</div>
-		<div class="strip text-center"><img src="images/edu.png" alt=" "/></div>
-		<div class="edu-grids">
-			<div class="col-md-44 edu-grid">
-				<p>2013 - 2016</p><span>毕业</span>
-				<div class="edu-border">
-					<div class="edu-grid-master">
-						<h3>移动应用开发</h3>
-						<h4>中山职业技术学院</h4>
-					</div>
-					<div class="edu-grid-info">
-						<h5>各科专业成绩多数为优,个别良好,无挂科记录.多次参加学院的各种技能比赛和代表学院参加省级比赛.</h5>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	
-</div>
-<!--//education-->
-<div class="strip-border"><p></p></div>
-<!--work-->
-<div class="work-experience text-center">
-	
-	<div class="container">
-		<div class="work-info">
-			<h3>工作经验</h3>
-		</div>
-		<div class="strip text-center"><img src="images/work.png" alt=" "/></div>
-		<div class="work-grids">
-			<div class="col-md-44 w-grid">
-				<div class="work-grid">
-					<h3>2015 - 2016</h3>
-					<div class="work-grid-info">
-						<h4>中山哎舍网络科技有限公司</h4>
-						<h5>Android软件工程师</h5>
-						<p>主要负责业务Android端的开发，开发的主要内容与地图有关，
-						国内外几乎所有的地图接口都用过(包括室内地图都接过)，负责app的部分ui，
-						数据的上传与解析加载，搭载整体的app框架。公司实行敏捷开发模式，
-						有时也会负责做简单的H5页面，因此会用ASP.NET,IIS写基础的后台与API接口</p>
-					</div>
-				</div>
-			</div>
-			<div class="clearfix"></div>
-		</div>
-	</div>
-</div>
-<!--//work-->
-<div class="services-back"></div>
+          		</div> 
+				<!-- item end -->
+				
+				<div class="columns portfolio-item">
+                  <div class="law"> 
 
-<!--services-->
-<div class="services text-center" id="services">
-	<div class="container">
-		<div class="ser-info">
-			<h3>使用的工具</h3>
-		</div>
-		<div class="strip text-center"><img src="images/ser.png" alt=" "/></div>
-		<div class="ser-grids">
-			<div class="col-md-3 ser-grid">
-				<div class="ser-imagea"></div>
-				<h3>Android Studio</h3>
-				<p>主要开发工具,用于开发Android应用</p>
-			</div>
-			<div class="col-md-3 ser-grid">
-				<div class="ser-imageb"></div>
-				<h3>Eclipse</h3>
-				<p>主要使用工具,用于开发Android应用与Java类测试</p>
-			</div>
-			<div class="col-md-3 ser-grid">
-				<div class="ser-imagec"></div>
-				<h3>Visual Studio</h3>
-				<p>次要使用工具,用于开发网页应用与后台开发</p>
-			</div>
-			<div class="col-md-3 ser-grid">
-				<div class="ser-imaged"></div>
-				<h3>PhotoShop</h3>
-				<p>次要使用工具,主要用来修饰图片用于满足日常需求</p>
-			</div>
-			<div class="clearfix"></div>
-		</div>
-	</div>
-</div>
-<!--//services-->
-<!--portfolio-->
-<div class="gallery-section text-center" id="portfolio">
-	<div class="container">
-		<h3>参与产品</h3>
-		<div class="strip text-center"><img src="images/port.png" alt=" "/></div>
-		<p>初出茅庐,虽然接触的项目并不多,但是从项目当中学到了非常多的知识</p>
-		<div class="gallery-grids">
-			<div class="top-gallery">
-				<div class="col-md-4 gallery-grid gallery1">
-					<img src="images/p1.png" class="img-responsive" alt="/">
-				</div>
-				<div class="col-md-4 gallery-grid gallery1">
-					<img src="images/p2.png" class="img-responsive" alt="/">
-				</div>
-				<div class="col-md-4 gallery-grid gallery1">
-					<img src="images/p3.png" class="img-responsive" alt="/">
-				</div>
-				<div class="clearfix"> </div>
-			</div>
-				<link rel="stylesheet" href="css/swipebox.css">
-				<script src="js/jquery.swipebox.min.js"></script> 
-					<script type="text/javascript">
-						jQuery(function($) {
-							$(".swipebox").swipebox();
-						});
-					</script>
-		</div>
-	</div>
-</div>
-<!--//portfolio-->
-<!--process-->
-<div class="process text-center">
-	<div class="container">
-		<h3>产品过程</h3>
-		<div class="strip text-center"><img src="images/pro.png" alt=" "/></div>
-		<div class="process-girds">
-			<div class="col-md-2 process-pad">
-				<div class="process-gird">
-					<div class="process-imagea"></div>
-					<p>需求</p>
-					<img src="images/6.png" alt=""/>
-				</div>
-			</div>
-			<div class="col-md-2 process-pad">
-				<div class="process-gird">
-					<div class="process-imageb"></div>
-					<p>概念</p>
-					<img class="pro-imga" src="images/6.png" alt=""/>
-				</div>
-			</div>
-			<div class="col-md-2 process-pad">
-				<div class="process-gird">
-					<div class="process-imagec"></div>
-					<p>设计</p>
-					<img class="pro-img" src="images/6.png" alt=""/>
-				</div>
-			</div>
-			<div class="col-md-2 process-pad">
-				<div class="process-gird">
-					<div class="process-imaged"></div>
-					<p>开发</p>
-					<img class="pro-imgb" src="images/6.png" alt=""/>
-				</div>
-			</div>
-			<div class="col-md-2 process-pad">
-				<div class="process-gird">
-					<div class="process-imagee"></div>
-					<p>测试</p>
-					<img src="images/6.png" alt=""/>
-				</div>
-			</div>
-			<div class="col-md-2 process-pad">
-				<div class="process-gird">
-					<div class="process-imagef"></div>
-					<p>上架</p>
-					
-				</div>
-			</div>
-			<div class="clearfix"></div>
-		</div>
-	</div>
-</div>
-<!--//process-->
-<div class="process-back"></div>
-<!--clients-->
-<div class="clients text-center" id="prize">
-	<div class="container">
-		<h4>所获奖项</h4>
-		<div class="strip-line"></div>
-		<div class="client-grids">
-			<div class="col-md-4 cl-grid">
-				<div class="client-grid">
-					<h4>软件开发竞赛二等奖【学院】</h4>
-				</div>
-			</div>
-			<div class="col-md-4 cl-grid">
-				<div class="client-grid">
-					<h4>移动应用开发二等奖【省级】</h4>
-				</div>
-			</div>
-			<div class="col-md-4 cl-grid">
-				<div class="client-grid">
-					<h4>蓝桥杯java组二等奖【省级】</h4>
-				</div>
-			</div>
-			<div class="clearfix"></div>
-		</div>
-	</div>
-</div>
-<!--clients-->
-<div class="client-back"></div>
+					<a title="我的法律顾问" href="images/law/law.png">
+					<img id="law" class="scale-with-grid" src="images/law/law.png" alt="" width="200" height="300"/>
+					</a>
+					<a title="我的法律顾问" href="images/law/1.png"></a>
+					<a title="我的法律顾问" href="images/law/2.png"></a>
+					<a title="我的法律顾问" href="images/law/3.png"></a>
+					<a title="我的法律顾问" href="images/law/4.png"></a>
+					<a title="我的法律顾问" href="images/law/5.png"></a>
+					<a title="我的法律顾问" href="images/law/6.png"></a>
+					<a title="我的法律顾问" href="images/law/7.png"></a>
+					<a title="我的法律顾问" href="images/law/8.png"></a>
 
-<div class="contact-back"></div>
-<!--contact-->
-<div class="contact" id="contact">
-	<div class="container">
-		<div class="contact-info text-center">
-			<h3>联系我</h3>
-			<div class="strip text-center"><img src="images/con1.png" alt=" "/></div>
-		</div>
-		<div class="contact-grids">
-			<div class="col-md-4 contact-left">
-				<h3>讨论交流</h3>
-				<div class="stripb"></div>
-				<ul>
-					<li>广东省</li>
-					<li>广州市天河区</li>
-					<li>程界西村三多南大街</li>
-					<li>QQ:825570853</li>
-					<li><a href="mailto:wenwenwen888@live.com">wenwenwen888@live.com</a></li>
-				</ul>
+				</div>
+				<script type="text/jscript">
+					$('#law').click(function() {
+						$('.law').magnificPopup({
+						delegate: 'a',
+						type: 'image',
+						tLoading: 'Loading image #%curr%...',
+						mainClass: 'mfp-img-mobile',
+						gallery: {
+							enabled: true,
+							navigateByImgClick: true,
+							preload: [0,1] // Will preload 0 - before current, and 1 after the current image
+						},
+						image: {
+							tError: '<a href="%url%">The image #%curr%</a> could not be loaded.',
+							titleSrc: function(item) {
+								return item.el.attr('title') + '<small>By Won</small>';
+							}
+						}
+					});
+					});
+				</script>
+          		</div> 
+				
+				<!-- item end -->
+				
+				<div class="columns portfolio-item">
+                  <div class="ep"> 
+
+					<a title="环保APP" href="images/ep/ep.png">
+					<img id="ep" class="scale-with-grid" src="images/ep/ep.png" alt="" width="200" height="300"/>
+					</a>
+					<a title="环保APP" href="images/ep/1.png"></a>
+					<a title="环保APP" href="images/ep/2.png"></a>
+					<a title="环保APP" href="images/ep/3.png"></a>
+					<a title="环保APP" href="images/ep/4.png"></a>
+					<a title="环保APP" href="images/ep/5.png"></a>
+					<a title="环保APP" href="images/ep/6.png"></a>
+					<a title="环保APP" href="images/ep/7.png"></a>
+					<a title="环保APP" href="images/ep/8.png"></a>
+					<a title="环保APP" href="images/ep/9.png"></a>
+					<a title="环保APP" href="images/ep/10.png"></a>
+					<a title="环保APP" href="images/ep/11.png"></a>
+					<a title="环保APP" href="images/ep/12.png"></a>
+
+				</div>
+				<script type="text/jscript">
+					$('#ep').click(function() {
+						$('.ep').magnificPopup({
+						delegate: 'a',
+						type: 'image',
+						tLoading: 'Loading image #%curr%...',
+						mainClass: 'mfp-img-mobile',
+						gallery: {
+							enabled: true,
+							navigateByImgClick: true,
+							preload: [0,1] // Will preload 0 - before current, and 1 after the current image
+						},
+						image: {
+							tError: '<a href="%url%">The image #%curr%</a> could not be loaded.',
+							titleSrc: function(item) {
+								return item.el.attr('title') + '<small>By Won</small>';
+							}
+						}
+					});
+					});
+				</script>
+          		</div> 
+				<!-- item end -->     
+				
+
+               <div class="columns portfolio-item">
+                  <div class="jiaofu"> 
+
+					<a title="同步教辅" href="images/jiaofu/1.png">
+					<img id="jiaofu" class="scale-with-grid" src="images/jiaofu/1.png" alt="" width="200" height="300"/>
+					</a>
+					<a title="同步教辅" href="images/jiaofu/2.png"></a>
+					<a title="同步教辅" href="images/jiaofu/3.png"></a>
+					<a title="同步教辅" href="images/jiaofu/4.png"></a>
+					<a title="同步教辅" href="images/jiaofu/5.png"></a>
+					<a title="同步教辅" href="images/jiaofu/6.png"></a>
+					<a title="同步教辅" href="images/jiaofu/7.png"></a>
+					<a title="同步教辅" href="images/jiaofu/8.png"></a>
+
+				</div>
+				<script type="text/jscript">
+					$('#jiaofu').click(function() {
+						$('.jiaofu').magnificPopup({
+						delegate: 'a',
+						type: 'image',
+						tLoading: 'Loading image #%curr%...',
+						mainClass: 'mfp-img-mobile',
+						gallery: {
+							enabled: true,
+							navigateByImgClick: true,
+							preload: [0,1] // Will preload 0 - before current, and 1 after the current image
+						},
+						image: {
+							tError: '<a href="%url%">The image #%curr%</a> could not be loaded.',
+							titleSrc: function(item) {
+								return item.el.attr('title') + '<small>By Won</small>';
+							}
+						}
+					});
+					});
+				</script>
+          		</div> 
+				<!-- item end -->
+
+               <div class="columns portfolio-item">
+                  <div class="movie"> 
+
+					<a title="小瓣" href="images/movie/movie.png">
+					<img id="movie" class="scale-with-grid" src="images/movie/movie.png" alt="" width="200" height="300"/>
+					</a>
+					<a title="小瓣" href="images/movie/1.png"></a>
+					<a title="小瓣" href="images/movie/2.png"></a>
+					<a title="小瓣" href="images/movie/3.png"></a>
+					<a title="小瓣" href="images/movie/4.png"></a>
+					<a title="小瓣" href="images/movie/5.png"></a>
+					<a title="小瓣" href="images/movie/6.png"></a>
+					<a title="小瓣" href="images/movie/7.png"></a>
+					<a title="小瓣" href="images/movie/8.png"></a>
+
+				</div>
+				<script type="text/jscript">
+					$('#movie').click(function() {
+						$('.movie').magnificPopup({
+						delegate: 'a',
+						type: 'image',
+						tLoading: 'Loading image #%curr%...',
+						mainClass: 'mfp-img-mobile',
+						gallery: {
+							enabled: true,
+							navigateByImgClick: true,
+							preload: [0,1] // Will preload 0 - before current, and 1 after the current image
+						},
+						image: {
+							tError: '<a href="%url%">The image #%curr%</a> could not be loaded.',
+							titleSrc: function(item) {
+								return item.el.attr('title') + '<small>By Won</small>';
+							}
+						}
+					});
+					});
+				</script>
+          		</div> 
+				<!-- item end -->                       
+
+               <div class="columns portfolio-item">
+                  <div class="ucar"> 
+
+					<a title="优车会" href="images/ucar/1.png">
+					<img id="ucar" class="scale-with-grid" src="images/ucar/1.png" alt="" width="200" height="300"/>
+					</a>
+					<a title="优车会" href="images/ucar/2.png"></a>
+					<a title="优车会" href="images/ucar/3.png"></a>
+					<a title="优车会" href="images/ucar/4.png"></a>
+					<a title="优车会" href="images/ucar/5.png"></a>
+					<a title="优车会" href="images/ucar/6.png"></a>
+					<a title="优车会" href="images/ucar/7.png"></a>
+					<a title="优车会" href="images/ucar/8.png"></a>
+
+				</div>
+				<script type="text/jscript">
+					$('#ucar').click(function() {
+						$('.ucar').magnificPopup({
+						delegate: 'a',
+						type: 'image',
+						tLoading: 'Loading image #%curr%...',
+						mainClass: 'mfp-img-mobile',
+						gallery: {
+							enabled: true,
+							navigateByImgClick: true,
+							preload: [0,1] // Will preload 0 - before current, and 1 after the current image
+						},
+						image: {
+							tError: '<a href="%url%">The image #%curr%</a> could not be loaded.',
+							titleSrc: function(item) {
+								return item.el.attr('title') + '<small>By Won</small>';
+							}
+						}
+					});
+					});
+				</script>
+          		</div> 
+				<!-- item end -->
+
+               <div class="columns portfolio-item">
+                  <div class="mgmc"> 
+
+					<a title="明广名车" href="images/mgmc/1.png">
+					<img id="mgmc" class="scale-with-grid" src="images/mgmc/1.png" alt="" width="200" height="300"/>
+					</a>
+					<a title="明广名车" href="images/mgmc/2.png"></a>
+					<a title="明广名车" href="images/mgmc/3.png"></a>
+					<a title="明广名车" href="images/mgmc/4.png"></a>
+					<a title="明广名车" href="images/mgmc/5.png"></a>
+					<a title="明广名车" href="images/mgmc/6.png"></a>
+					<a title="明广名车" href="images/mgmc/7.png"></a>
+					<a title="明广名车" href="images/mgmc/8.png"></a>
+					<a title="明广名车" href="images/mgmc/9.png"></a>
+					<a title="明广名车" href="images/mgmc/10.png"></a>
+
+				</div>
+				<script type="text/jscript">
+					$('#mgmc').click(function() {
+						$('.mgmc').magnificPopup({
+						delegate: 'a',
+						type: 'image',
+						tLoading: 'Loading image #%curr%...',
+						mainClass: 'mfp-img-mobile',
+						gallery: {
+							enabled: true,
+							navigateByImgClick: true,
+							preload: [0,1] // Will preload 0 - before current, and 1 after the current image
+						},
+						image: {
+							tError: '<a href="%url%">The image #%curr%</a> could not be loaded.',
+							titleSrc: function(item) {
+								return item.el.attr('title') + '<small>By Won</small>';
+							}
+						}
+					});
+					});
+				</script>
+          		</div> 
+				<!-- item end -->
+				
+				<div class="columns portfolio-item">
+                  <div class="aiyixue"> 
+
+					<a title="爱易学" href="images/aiyixue/1.png">
+					<img id="aiyixue" class="scale-with-grid" src="images/aiyixue/1.png" alt="" width="200" height="300"/>
+					</a>
+					<a title="爱易学" href="images/aiyixue/2.png"></a>
+					<a title="爱易学" href="images/aiyixue/3.png"></a>
+					<a title="爱易学" href="images/aiyixue/4.png"></a>
+					<a title="爱易学" href="images/aiyixue/5.png"></a>
+					<a title="爱易学" href="images/aiyixue/6.png"></a>
+					<a title="爱易学" href="images/aiyixue/7.png"></a>
+					<a title="爱易学" href="images/aiyixue/8.png"></a>
+					<a title="爱易学" href="images/aiyixue/9.png"></a>
+					<a title="爱易学" href="images/aiyixue/10.png"></a>
+					<a title="爱易学" href="images/aiyixue/11.png"></a>
+					<a title="爱易学" href="images/aiyixue/12.png"></a>
+
+				</div>
+				<script type="text/jscript">
+					$('#aiyixue').click(function() {
+						$('.aiyixue').magnificPopup({
+						delegate: 'a',
+						type: 'image',
+						tLoading: 'Loading image #%curr%...',
+						mainClass: 'mfp-img-mobile',
+						gallery: {
+							enabled: true,
+							navigateByImgClick: true,
+							preload: [0,1] // Will preload 0 - before current, and 1 after the current image
+						},
+						image: {
+							tError: '<a href="%url%">The image #%curr%</a> could not be loaded.',
+							titleSrc: function(item) {
+								return item.el.attr('title') + '<small>By Won</small>';
+							}
+						}
+					});
+					});
+				</script>
+          	</div> 
+				<!-- item end -->
+
+            </div> <!-- portfolio-wrapper end -->
+
+         </div> <!-- twelve columns end -->
+
+      </div> <!-- row End -->
+
+   </section> <!-- Portfolio Section End-->
+
+
+   <!-- Testimonials Section
+   ================================================== -->
+   <section id="testimonials">
+
+      <div class="text-container">
+
+         <div class="row">
+
+            <div class="two columns header-col">
+
+               <h1><span>Client Testimonials</span></h1>
+
+            </div>
+
+            <div class="ten columns flex-container">
+
+               <div class="flexslider">
+
+                  <ul class="slides">
+
+                     <li>
+                        <blockquote>
+                           <p>
+						   "有bug ? 不会吧 , 看看是不是你网络不好 . "</br>
+						   "版本问题 , 你升级一下就好 . "</br>
+						   "你忘记清除缓存了 , 兄弟 . "</br>
+						   "没办法 , 这是一个公认的bug . "</br>
+						   "这不是bug , 这只不过是配置问题 , 马上就改 . "</br>
+						   "程序肯定是没问题了 , 你是不是改了什么 , 你重演一下我看看 . "</br>
+                           </p>
+                           <cite>千错万错不是我的错</cite>
+                        </blockquote>
+                     </li> <!-- slide ends -->
+
+                     <li>
+                        <blockquote>
+                           <p>
+						   "不可能出现这种情况的啊 . "</br>
+						   "快了 , 已经完成了90% . "</br>
+						   "这个很简单的 , 我一个礼拜就能完成 . "</br>
+						   "已经做好了 , 但还有一些细节要调一下 . "</br>
+						   "我检查过好几遍了 , 没问题的 , 上线吧 ! "</br>
+						   "再给我两天 , 我加班完成 , 保证能做好 . "</br>
+                           </p>
+                           <cite>老板求求你放我一天假吧</cite>
+                        </blockquote>
+                     </li> <!-- slide ends -->
+
+                  </ul>
+
+               </div> <!-- div.flexslider ends -->
+
+            </div> <!-- div.flex-container ends -->
+
+         </div> <!-- row ends -->
+
+       </div>  <!-- text-container ends -->
+
+   </section> <!-- Testimonials Section End-->
+
+
+   <!-- Contact Section
+   ================================================== -->
+   <section id="contact">
+
+         <div class="row section-head">
+
+            <div class="two columns header-col">
+
+               <h1><span>得闲饮茶.</span></h1>
+
+            </div>
+
+            <div class="ten columns">
+
+                  <p class="lead">
+				  关于工作的 , 可以直接来电或加微信详聊(24小时在线等你消息哟~) . </br>
+				  关于学习的 , 可以加微信或QQ详聊互相探讨深究 . </br>
+				  当然 , 除了工作和学习 , 也会偶尔玩玩游戏 , 听听音乐和看看电影动漫 . LOL , 守望先锋 , 绝地求生 , 欢迎加好友来一起双排 . 
+				  关于电影 , 音乐和动漫的也可以互相促膝长谈哦~</br>
+				  欢迎来撩~  ヾ(´∀`o)
+                  </p>
+
+            </div>
+
+         </div>
+
+         <div class="row">
+
+			 <div class="five columns">
+		 
+               <div class="widget widget_contact">
+
+				   <h4>联系详情</h4>
+				   <p class="address">
+					   地址 : 广东省广州市增城区中新镇风光路五巷二横1号<br>
+					   电话 : (+86)13046666947<br>
+					   邮箱 : wenjunnan1994@gmail<br>
+				   </p>
+
+			   </div>
+			   
+			 </div>
+
+			 <div class="five columns">
+               <div class="widget widget_tweets">
+
+					  <h4 class="widget-title">学习与社交</h4>
+
+					 <p class="address">
+						<a href="https://github.com/wenwenwen888" target="_blank">Github</a>
+						<a href="http://weibo.com/u/1934084233" target="_blank">&nbsp;&nbsp;微博</a>
+						<a href="https://www.facebook.com/profile.php?id=100006004158771" target="_blank">&nbsp;&nbsp;Facebook</a>
+						<a href="https://www.instagram.com/wenwenwen_888/" target="_blank">&nbsp;&nbsp;Instagram</a>
+						<a href="mailto:wenjunnan1994@gmail">&nbsp;&nbsp;邮箱</a></br>
+						   微信&&QQ : 825570853<br>
+						   战网 : 周星星#51298<br>
+						   Steam : wenwenwen888<br>		
+					 </p>
+
+		       </div>
 			</div>
-			<div class="col-md-4 contact-left">
-				<h3>交朋友</h3>
-				<div class="stripb"></div>
-				<ul>
-					<li><a href="http://weibo.com/u/1934084233" target="_blank">微博</a></li>
-					<li><a href="https://www.facebook.com/profile.php?id=100006004158771" target="_blank">Facebook</a></li>
-					<li></li>
-					<li>OverWatch:温温温888#5605</li>
-					<li>更多详细个人资料请下载我的简历</li>
-				</ul>
-			</div>
-			<div class="col-md-4 contact-left">
-				<h3>合作联系</h3>
-				<div class="stripb"></div>
-				<ul>
-					<li>手机号码:</li>
-					<li>13046333947</li>
-					<li></li>
-					<li>WeChat:825570853</li>
-				</ul>
-			</div>
-			<div class="clearfix"></div>
-		</div>
-	</div>
-</div>
-<!--//contact-->
-<div class="footer-top"></div>
-<!--resume-->
-<div class="resume text-center">
-	<div class="container">
-		<div class="strip text-center"><a href="温俊南(安卓开发工程师).doc" target="_blank"><img src="images/down.png" alt=" "/></a></div>
-		<div class="down"><a href="温俊南(安卓开发工程师).doc" target="_blank">下载我的简历</a></div>
-	</div>
-</div>
-<!--//resume-->
-<!-- here stars scrolling icon -->
-	<script type="text/javascript">
-		$(document).ready(function() {
-			/*
-				var defaults = {
-				containerID: 'toTop', // fading element id
-				containerHoverID: 'toTopHover', // fading element hover id
-				scrollSpeed: 1200,
-				easingType: 'linear' 
-				};
-			*/
-								
-			$().UItoTop({ easingType: 'easeOutQuart' });
-								
-			});
-	</script>
-<!-- //here ends scrolling icon -->
+      </div>
+
+   </section> <!-- Contact Section End-->
+
+
+   <!-- footer
+   ================================================== -->
+   <footer>
+
+      <div class="row">
+
+         <div id="go-top"><a class="smoothscroll" title="Back to Top" href="#home"><i class="icon-up-open"></i></a></div>
+
+      </div>
+
+   </footer> <!-- Footer End-->
+
+
 </body>
+
 </html>

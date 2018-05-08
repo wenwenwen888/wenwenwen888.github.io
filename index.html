@@ -44,10 +44,9 @@
    <script src="js/magnific-popup.js"></script>
    <script src="js/init.js"></script>
    
-   <!-- 弹框查看图片的JS文件引用 -->
-	<link rel="stylesheet" href="http://keleyi.com/keleyi/phtml/jqtexiao/3/css/keleyi.css">
-	<script type="text/javascript" src="http://keleyi.com/keleyi/pmedia/jquery/jquery-1.10.2.min.js"></script>
-	<script type="text/javascript" src="http://keleyi.com/keleyi/phtml/jqtexiao/3/js/keleyi.min.js"></script>
+	<!-- 弹框查看图片的JS文件引用 -->
+	<link rel="stylesheet" href="css/viewer.min.css">
+	<script src="js/viewer.min.js"></script>
 	
 	<script type="text/javascript">
 		$(function() {
@@ -431,81 +430,45 @@
             <div id="portfolio-wrapper" class="bgrid-quarters s-bgrid-thirds cf"> 
 			
 			<div class="columns portfolio-item">
-                  <div class="xh"> 
-
-					<a title="校汇" href="images/xh/1.png">
-					<img id="xh" class="scale-with-grid" src="images/xh/1.png" alt="" width="200" height="300"/>
-					</a>
-					<a title="校汇" href="images/xh/2.png"></a>
-					<a title="校汇" href="images/xh/3.png"></a>
-					<a title="校汇" href="images/xh/4.png"></a>
-					<a title="校汇" href="images/xh/5.png"></a>
-					<a title="校汇" href="images/xh/6.png"></a>
-					<a title="校汇" href="images/xh/7.png"></a>
-					<a title="校汇" href="images/xh/8.png"></a>
-					<a title="校汇" href="images/xh/9.png"></a>
-					<a title="校汇" href="images/xh/10.png"></a>
-
+                  <div id="xh"> 
+					
+					<img id="xh" class="scale-with-grid" data-original="images/xh/1.png" src="images/xh/1.png" alt="校汇1" width="200" height="300">
+					<img data-original="images/xh/2.png" src="images/xh/2.png" alt="校汇2" style="display:none">
+					<img data-original="images/xh/3.png" src="images/xh/3.png" alt="校汇3" style="display:none">
+					<img data-original="images/xh/4.png" src="images/xh/4.png" alt="校汇4" style="display:none">
+					<img data-original="images/xh/5.png" src="images/xh/5.png" alt="校汇5" style="display:none">
+					<img data-original="images/xh/6.png" src="images/xh/6.png" alt="校汇6" style="display:none">
+					<img data-original="images/xh/7.png" src="images/xh/7.png" alt="校汇7" style="display:none">
+					<img data-original="images/xh/8.png" src="images/xh/8.png" alt="校汇8" style="display:none">
+					<img data-original="images/xh/9.png" src="images/xh/9.png" alt="校汇9" style="display:none">
+					<img data-original="images/xh/10.png" src="images/xh/10.png" alt="校汇10" style="display:none">
+					
 				</div>
-				<script type="text/jscript">
-					$('#xh').click(function() {
-						$('.xh').magnificPopup({
-						delegate: 'a',
-						type: 'image',
-						tLoading: 'Loading image #%curr%...',
-						mainClass: 'mfp-img-mobile',
-						gallery: {
-							enabled: true,
-							navigateByImgClick: true,
-							preload: [0,1] // Will preload 0 - before current, and 1 after the current image
-						},
-						image: {
-							tError: '<a href="%url%">The image #%curr%</a> could not be loaded.',
-							titleSrc: function(item) {
-								return item.el.attr('title') + '<small>By Won</small>';
-							}
-						}
-					});
+				<script>
+					var viewer = new Viewer(document.getElementById('xh'), {
+						url: 'data-original'
 					});
 				</script>
           		</div> 
 				<!-- item end -->
 				
 				<div class="columns portfolio-item">
-                  <div class="law"> 
+                  <div id="law"> 
 
-					<a title="我的法律顾问" href="images/law/law.png">
-					<img id="law" class="scale-with-grid" src="images/law/law.png" alt="" width="200" height="300"/>
-					</a>
-					<a title="我的法律顾问" href="images/law/1.png"></a>
-					<a title="我的法律顾问" href="images/law/2.png"></a>
-					<a title="我的法律顾问" href="images/law/3.png"></a>
-					<a title="我的法律顾问" href="images/law/4.png"></a>
-					<a title="我的法律顾问" href="images/law/5.png"></a>
-					<a title="我的法律顾问" href="images/law/6.png"></a>
-					<a title="我的法律顾问" href="images/law/7.png"></a>
-					<a title="我的法律顾问" href="images/law/8.png"></a>
+					<img id="law" class="scale-with-grid" data-original="images/law/law.png" src="images/law/law.png" alt="我的法律顾问1" width="200" height="300">
+					<img data-original="images/law/1.png" src="images/law/1.png" alt="我的法律顾问2" style="display:none">
+					<img data-original="images/law/2.png" src="images/law/2.png" alt="我的法律顾问3" style="display:none">
+					<img data-original="images/law/3.png" src="images/law/3.png" alt="我的法律顾问4" style="display:none">
+					<img data-original="images/law/4.png" src="images/law/4.png" alt="我的法律顾问5" style="display:none">
+					<img data-original="images/law/5.png" src="images/law/5.png" alt="我的法律顾问6" style="display:none">
+					<img data-original="images/law/6.png" src="images/law/6.png" alt="我的法律顾问7" style="display:none">
+					<img data-original="images/law/7.png" src="images/law/7.png" alt="我的法律顾问8" style="display:none">
+					<img data-original="images/law/8.png" src="images/law/8.png" alt="我的法律顾问9" style="display:none">
 
 				</div>
-				<script type="text/jscript">
-					$('#law').click(function() {
-						$('.law').magnificPopup({
-						delegate: 'a',
-						type: 'image',
-						tLoading: 'Loading image #%curr%...',
-						mainClass: 'mfp-img-mobile',
-						gallery: {
-							enabled: true,
-							navigateByImgClick: true,
-							preload: [0,1] // Will preload 0 - before current, and 1 after the current image
-						},
-						image: {
-							tError: '<a href="%url%">The image #%curr%</a> could not be loaded.',
-							titleSrc: function(item) {
-								return item.el.attr('title') + '<small>By Won</small>';
-							}
-						}
-					});
+				<script>
+					var viewer = new Viewer(document.getElementById('law'), {
+						url: 'data-original'
 					});
 				</script>
           		</div> 
@@ -513,44 +476,26 @@
 				<!-- item end -->
 				
 				<div class="columns portfolio-item">
-                  <div class="ep"> 
+                  <div id="ep"> 
 
-					<a title="环保APP" href="images/ep/ep.png">
-					<img id="ep" class="scale-with-grid" src="images/ep/ep.png" alt="" width="200" height="300"/>
-					</a>
-					<a title="环保APP" href="images/ep/1.png"></a>
-					<a title="环保APP" href="images/ep/2.png"></a>
-					<a title="环保APP" href="images/ep/3.png"></a>
-					<a title="环保APP" href="images/ep/4.png"></a>
-					<a title="环保APP" href="images/ep/5.png"></a>
-					<a title="环保APP" href="images/ep/6.png"></a>
-					<a title="环保APP" href="images/ep/7.png"></a>
-					<a title="环保APP" href="images/ep/8.png"></a>
-					<a title="环保APP" href="images/ep/9.png"></a>
-					<a title="环保APP" href="images/ep/10.png"></a>
-					<a title="环保APP" href="images/ep/11.png"></a>
-					<a title="环保APP" href="images/ep/12.png"></a>
+					<img id="ep" class="scale-with-grid" data-original="images/ep/ep.png" src="images/ep/ep.png" alt="环保APP1" width="200" height="300">
+					<img data-original="images/ep/1.png" src="images/ep/1.png" alt="环保APP2" style="display:none">
+					<img data-original="images/ep/2.png" src="images/ep/2.png" alt="环保APP3" style="display:none">
+					<img data-original="images/ep/3.png" src="images/ep/3.png" alt="环保APP4" style="display:none">
+					<img data-original="images/ep/4.png" src="images/ep/4.png" alt="环保APP5" style="display:none">
+					<img data-original="images/ep/5.png" src="images/ep/5.png" alt="环保APP6" style="display:none">
+					<img data-original="images/ep/6.png" src="images/ep/6.png" alt="环保APP7" style="display:none">
+					<img data-original="images/ep/7.png" src="images/ep/7.png" alt="环保APP8" style="display:none">
+					<img data-original="images/ep/8.png" src="images/ep/8.png" alt="环保APP9" style="display:none">
+					<img data-original="images/ep/9.png" src="images/ep/9.png" alt="环保APP10" style="display:none">
+					<img data-original="images/ep/10.png" src="images/ep/10.png" alt="环保APP11" style="display:none">
+					<img data-original="images/ep/11.png" src="images/ep/11.png" alt="环保APP12" style="display:none">
+					<img data-original="images/ep/12.png" src="images/ep/12.png" alt="环保APP13" style="display:none">
 
 				</div>
-				<script type="text/jscript">
-					$('#ep').click(function() {
-						$('.ep').magnificPopup({
-						delegate: 'a',
-						type: 'image',
-						tLoading: 'Loading image #%curr%...',
-						mainClass: 'mfp-img-mobile',
-						gallery: {
-							enabled: true,
-							navigateByImgClick: true,
-							preload: [0,1] // Will preload 0 - before current, and 1 after the current image
-						},
-						image: {
-							tError: '<a href="%url%">The image #%curr%</a> could not be loaded.',
-							titleSrc: function(item) {
-								return item.el.attr('title') + '<small>By Won</small>';
-							}
-						}
-					});
+				<script>
+					var viewer = new Viewer(document.getElementById('ep'), {
+						url: 'data-original'
 					});
 				</script>
           		</div> 
@@ -558,202 +503,113 @@
 				
 
                <div class="columns portfolio-item">
-                  <div class="jiaofu"> 
+                  <div id="jiaofu"> 
 
-					<a title="同步教辅" href="images/jiaofu/1.png">
-					<img id="jiaofu" class="scale-with-grid" src="images/jiaofu/1.png" alt="" width="200" height="300"/>
-					</a>
-					<a title="同步教辅" href="images/jiaofu/2.png"></a>
-					<a title="同步教辅" href="images/jiaofu/3.png"></a>
-					<a title="同步教辅" href="images/jiaofu/4.png"></a>
-					<a title="同步教辅" href="images/jiaofu/5.png"></a>
-					<a title="同步教辅" href="images/jiaofu/6.png"></a>
-					<a title="同步教辅" href="images/jiaofu/7.png"></a>
-					<a title="同步教辅" href="images/jiaofu/8.png"></a>
+					<img id="jiaofu" class="scale-with-grid" data-original="images/jiaofu/1.png" src="images/jiaofu/1.png" alt="同步教辅1" width="200" height="300">
+					<img data-original="images/jiaofu/2.png" src="images/jiaofu/2.png" alt="同步教辅2" style="display:none">
+					<img data-original="images/jiaofu/3.png" src="images/jiaofu/3.png" alt="同步教辅3" style="display:none">
+					<img data-original="images/jiaofu/4.png" src="images/jiaofu/4.png" alt="同步教辅4" style="display:none">
+					<img data-original="images/jiaofu/5.png" src="images/jiaofu/5.png" alt="同步教辅5" style="display:none">
+					<img data-original="images/jiaofu/6.png" src="images/jiaofu/6.png" alt="同步教辅6" style="display:none">
+					<img data-original="images/jiaofu/7.png" src="images/jiaofu/7.png" alt="同步教辅7" style="display:none">
+					<img data-original="images/jiaofu/8.png" src="images/jiaofu/8.png" alt="同步教辅8" style="display:none">
 
 				</div>
-				<script type="text/jscript">
-					$('#jiaofu').click(function() {
-						$('.jiaofu').magnificPopup({
-						delegate: 'a',
-						type: 'image',
-						tLoading: 'Loading image #%curr%...',
-						mainClass: 'mfp-img-mobile',
-						gallery: {
-							enabled: true,
-							navigateByImgClick: true,
-							preload: [0,1] // Will preload 0 - before current, and 1 after the current image
-						},
-						image: {
-							tError: '<a href="%url%">The image #%curr%</a> could not be loaded.',
-							titleSrc: function(item) {
-								return item.el.attr('title') + '<small>By Won</small>';
-							}
-						}
-					});
+				<script>
+					var viewer = new Viewer(document.getElementById('jiaofu'), {
+						url: 'data-original'
 					});
 				</script>
           		</div> 
 				<!-- item end -->
 
                <div class="columns portfolio-item">
-                  <div class="movie"> 
+                  <div id="movie"> 
 
-					<a title="小瓣" href="images/movie/movie.png">
-					<img id="movie" class="scale-with-grid" src="images/movie/movie.png" alt="" width="200" height="300"/>
-					</a>
-					<a title="小瓣" href="images/movie/1.png"></a>
-					<a title="小瓣" href="images/movie/2.png"></a>
-					<a title="小瓣" href="images/movie/3.png"></a>
-					<a title="小瓣" href="images/movie/4.png"></a>
-					<a title="小瓣" href="images/movie/5.png"></a>
-					<a title="小瓣" href="images/movie/6.png"></a>
-					<a title="小瓣" href="images/movie/7.png"></a>
-					<a title="小瓣" href="images/movie/8.png"></a>
+					<img id="movie" class="scale-with-grid" data-original="images/movie/movie.png" src="images/movie/movie.png" alt="小瓣1" width="200" height="300">
+					<img data-original="images/movie/1.png" src="images/movie/1.png" alt="小瓣2" style="display:none">
+					<img data-original="images/movie/2.png" src="images/movie/2.png" alt="小瓣3" style="display:none">
+					<img data-original="images/movie/3.png" src="images/movie/3.png" alt="小瓣4" style="display:none">
+					<img data-original="images/movie/4.png" src="images/movie/4.png" alt="小瓣5" style="display:none">
+					<img data-original="images/movie/5.png" src="images/movie/5.png" alt="小瓣6" style="display:none">
+					<img data-original="images/movie/6.png" src="images/movie/6.png" alt="小瓣7" style="display:none">
+					<img data-original="images/movie/7.png" src="images/movie/7.png" alt="小瓣8" style="display:none">
+					<img data-original="images/movie/8.png" src="images/movie/8.png" alt="小瓣9" style="display:none">
 
 				</div>
-				<script type="text/jscript">
-					$('#movie').click(function() {
-						$('.movie').magnificPopup({
-						delegate: 'a',
-						type: 'image',
-						tLoading: 'Loading image #%curr%...',
-						mainClass: 'mfp-img-mobile',
-						gallery: {
-							enabled: true,
-							navigateByImgClick: true,
-							preload: [0,1] // Will preload 0 - before current, and 1 after the current image
-						},
-						image: {
-							tError: '<a href="%url%">The image #%curr%</a> could not be loaded.',
-							titleSrc: function(item) {
-								return item.el.attr('title') + '<small>By Won</small>';
-							}
-						}
-					});
+				<script>
+					var viewer = new Viewer(document.getElementById('movie'), {
+						url: 'data-original'
 					});
 				</script>
           		</div> 
 				<!-- item end -->                       
 
                <div class="columns portfolio-item">
-                  <div class="ucar"> 
+                  <div id="ucar"> 
 
-					<a title="优车会" href="images/ucar/1.png">
-					<img id="ucar" class="scale-with-grid" src="images/ucar/1.png" alt="" width="200" height="300"/>
-					</a>
-					<a title="优车会" href="images/ucar/2.png"></a>
-					<a title="优车会" href="images/ucar/3.png"></a>
-					<a title="优车会" href="images/ucar/4.png"></a>
-					<a title="优车会" href="images/ucar/5.png"></a>
-					<a title="优车会" href="images/ucar/6.png"></a>
-					<a title="优车会" href="images/ucar/7.png"></a>
-					<a title="优车会" href="images/ucar/8.png"></a>
+					<img id="ucar" class="scale-with-grid" data-original="images/ucar/1.png" src="images/ucar/1.png" alt="优车会1" width="200" height="300">
+					<img data-original="images/ucar/2.png" src="images/ucar/2.png" alt="优车会2" style="display:none">
+					<img data-original="images/ucar/3.png" src="images/ucar/3.png" alt="优车会3" style="display:none">
+					<img data-original="images/ucar/4.png" src="images/ucar/4.png" alt="优车会4" style="display:none">
+					<img data-original="images/ucar/5.png" src="images/ucar/5.png" alt="优车会5" style="display:none">
+					<img data-original="images/ucar/6.png" src="images/ucar/6.png" alt="优车会6" style="display:none">
+					<img data-original="images/ucar/7.png" src="images/ucar/7.png" alt="优车会7" style="display:none">
+					<img data-original="images/ucar/8.png" src="images/ucar/8.png" alt="优车会8" style="display:none">
 
 				</div>
-				<script type="text/jscript">
-					$('#ucar').click(function() {
-						$('.ucar').magnificPopup({
-						delegate: 'a',
-						type: 'image',
-						tLoading: 'Loading image #%curr%...',
-						mainClass: 'mfp-img-mobile',
-						gallery: {
-							enabled: true,
-							navigateByImgClick: true,
-							preload: [0,1] // Will preload 0 - before current, and 1 after the current image
-						},
-						image: {
-							tError: '<a href="%url%">The image #%curr%</a> could not be loaded.',
-							titleSrc: function(item) {
-								return item.el.attr('title') + '<small>By Won</small>';
-							}
-						}
-					});
+				<script>
+					var viewer = new Viewer(document.getElementById('ucar'), {
+						url: 'data-original'
 					});
 				</script>
           		</div> 
 				<!-- item end -->
 
                <div class="columns portfolio-item">
-                  <div class="mgmc"> 
-
-					<a title="明广名车" href="images/mgmc/1.png">
-					<img id="mgmc" class="scale-with-grid" src="images/mgmc/1.png" alt="" width="200" height="300"/>
-					</a>
-					<a title="明广名车" href="images/mgmc/2.png"></a>
-					<a title="明广名车" href="images/mgmc/3.png"></a>
-					<a title="明广名车" href="images/mgmc/4.png"></a>
-					<a title="明广名车" href="images/mgmc/5.png"></a>
-					<a title="明广名车" href="images/mgmc/6.png"></a>
-					<a title="明广名车" href="images/mgmc/7.png"></a>
-					<a title="明广名车" href="images/mgmc/8.png"></a>
-					<a title="明广名车" href="images/mgmc/9.png"></a>
+                  <div id="mgmc"> 
 					<a title="明广名车" href="images/mgmc/10.png"></a>
+					
+					<img id="mgmc" class="scale-with-grid" data-original="images/mgmc/1.png" src="images/mgmc/1.png" alt="明广名车1" width="200" height="300">
+					<img data-original="images/mgmc/2.png" src="images/mgmc/2.png" alt="明广名车2" style="display:none">
+					<img data-original="images/mgmc/3.png" src="images/mgmc/3.png" alt="明广名车3" style="display:none">
+					<img data-original="images/mgmc/4.png" src="images/mgmc/4.png" alt="明广名车4" style="display:none">
+					<img data-original="images/mgmc/5.png" src="images/mgmc/5.png" alt="明广名车5" style="display:none">
+					<img data-original="images/mgmc/6.png" src="images/mgmc/6.png" alt="明广名车6" style="display:none">
+					<img data-original="images/mgmc/7.png" src="images/mgmc/7.png" alt="明广名车7" style="display:none">
+					<img data-original="images/mgmc/8.png" src="images/mgmc/8.png" alt="明广名车8" style="display:none">
+					<img data-original="images/mgmc/9.png" src="images/mgmc/9.png" alt="明广名车9" style="display:none">
+					<img data-original="images/mgmc/10.png" src="images/mgmc/10.png" alt="明广名车10" style="display:none">
 
 				</div>
-				<script type="text/jscript">
-					$('#mgmc').click(function() {
-						$('.mgmc').magnificPopup({
-						delegate: 'a',
-						type: 'image',
-						tLoading: 'Loading image #%curr%...',
-						mainClass: 'mfp-img-mobile',
-						gallery: {
-							enabled: true,
-							navigateByImgClick: true,
-							preload: [0,1] // Will preload 0 - before current, and 1 after the current image
-						},
-						image: {
-							tError: '<a href="%url%">The image #%curr%</a> could not be loaded.',
-							titleSrc: function(item) {
-								return item.el.attr('title') + '<small>By Won</small>';
-							}
-						}
-					});
+				<script>
+					var viewer = new Viewer(document.getElementById('mgmc'), {
+						url: 'data-original'
 					});
 				</script>
           		</div> 
 				<!-- item end -->
 				
 				<div class="columns portfolio-item">
-                  <div class="aiyixue"> 
+                  <div id="aiyixue"> 
 
-					<a title="爱易学" href="images/aiyixue/1.png">
-					<img id="aiyixue" class="scale-with-grid" src="images/aiyixue/1.png" alt="" width="200" height="300"/>
-					</a>
-					<a title="爱易学" href="images/aiyixue/2.png"></a>
-					<a title="爱易学" href="images/aiyixue/3.png"></a>
-					<a title="爱易学" href="images/aiyixue/4.png"></a>
-					<a title="爱易学" href="images/aiyixue/5.png"></a>
-					<a title="爱易学" href="images/aiyixue/6.png"></a>
-					<a title="爱易学" href="images/aiyixue/7.png"></a>
-					<a title="爱易学" href="images/aiyixue/8.png"></a>
-					<a title="爱易学" href="images/aiyixue/9.png"></a>
-					<a title="爱易学" href="images/aiyixue/10.png"></a>
-					<a title="爱易学" href="images/aiyixue/11.png"></a>
-					<a title="爱易学" href="images/aiyixue/12.png"></a>
+					<img id="aiyixue" class="scale-with-grid" data-original="images/aiyixue/1.png" src="images/aiyixue/1.png" alt="爱易学1" width="200" height="300">
+					<img data-original="images/aiyixue/2.png" src="images/aiyixue/2.png" alt="爱易学2" style="display:none">
+					<img data-original="images/aiyixue/3.png" src="images/aiyixue/3.png" alt="爱易学3" style="display:none">
+					<img data-original="images/aiyixue/4.png" src="images/aiyixue/4.png" alt="爱易学4" style="display:none">
+					<img data-original="images/aiyixue/5.png" src="images/aiyixue/5.png" alt="爱易学5" style="display:none">
+					<img data-original="images/aiyixue/6.png" src="images/aiyixue/6.png" alt="爱易学6" style="display:none">
+					<img data-original="images/aiyixue/7.png" src="images/aiyixue/7.png" alt="爱易学7" style="display:none">
+					<img data-original="images/aiyixue/8.png" src="images/aiyixue/8.png" alt="爱易学8" style="display:none">
+					<img data-original="images/aiyixue/9.png" src="images/aiyixue/9.png" alt="爱易学9" style="display:none">
+					<img data-original="images/aiyixue/10.png" src="images/aiyixue/10.png" alt="爱易学10" style="display:none">
+					<img data-original="images/aiyixue/11.png" src="images/aiyixue/11.png" alt="爱易学11" style="display:none">
+					<img data-original="images/aiyixue/12.png" src="images/aiyixue/12.png" alt="爱易学12" style="display:none">
 
 				</div>
-				<script type="text/jscript">
-					$('#aiyixue').click(function() {
-						$('.aiyixue').magnificPopup({
-						delegate: 'a',
-						type: 'image',
-						tLoading: 'Loading image #%curr%...',
-						mainClass: 'mfp-img-mobile',
-						gallery: {
-							enabled: true,
-							navigateByImgClick: true,
-							preload: [0,1] // Will preload 0 - before current, and 1 after the current image
-						},
-						image: {
-							tError: '<a href="%url%">The image #%curr%</a> could not be loaded.',
-							titleSrc: function(item) {
-								return item.el.attr('title') + '<small>By Won</small>';
-							}
-						}
-					});
+				<script>
+					var viewer = new Viewer(document.getElementById('aiyixue'), {
+						url: 'data-original'
 					});
 				</script>
           	</div> 
